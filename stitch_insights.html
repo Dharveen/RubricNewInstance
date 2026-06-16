@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights &amp; Perspectives | Rubric Consulting</title>
+<!-- Google Fonts: Hanken Grotesk & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#410002",
+                        "tertiary-container": "#18222e",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#ffdad6",
+                        "tertiary": "#030b16",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-container": "#86888e",
+                        "primary-fixed": "#e1e2e9",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c6c6cb",
+                        "signal-red": "#E53935",
+                        "primary-container": "#1e2126",
+                        "on-background": "#1a1c1c",
+                        "primary-fixed-dim": "#c4c6cd",
+                        "tertiary-fixed-dim": "#bdc7d7",
+                        "surface": "#f9f9f9",
+                        "graphite": "#1E2126",
+                        "inverse-surface": "#2f3131",
+                        "platinum": "#FFFFFF",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#121c28",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#191c21",
+                        "dept-qa": "#E53935",
+                        "secondary-container": "#db322f",
+                        "dept-itsm": "#FFB020",
+                        "outline": "#76777b",
+                        "dept-dev": "#2563EB",
+                        "on-secondary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#d9e3f3",
+                        "secondary": "#b7131a",
+                        "dept-consulting": "#7C3AED",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-on-surface": "#f1f1f1",
+                        "dept-training": "#14B8A6",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "fog": "#F2F2F2",
+                        "on-primary-fixed-variant": "#44474c",
+                        "surface-variant": "#e2e2e2",
+                        "slate": "#687280",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5c5e64",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#7f8998",
+                        "on-tertiary-fixed-variant": "#3e4854",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#45474b",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "primary": "#070a0e",
+                        "inverse-primary": "#c4c6cd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "80px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "button": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .impact-vector {
+            display: inline-block;
+            width: 12px;
+            height: 2px;
+            background-color: #E53935;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F2F2F2;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #E53935;
+        }
+    </style>
+</head>
+<body class="bg-platinum text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-platinum border-b border-surface-variant">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary tracking-tighter" href="#">Rubric Consulting</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Home</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">About</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Services</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Careers</a>
+<a class="font-body-md text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Insights</a>
+</nav>
+<button class="bg-signal-red text-platinum font-button px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+                Contact Us
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto overflow-hidden relative">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-fog rounded-full opacity-50 blur-3xl -z-10"></div>
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-6">
+<span class="impact-vector"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-slate">Thought Leadership</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-graphite mb-8 leading-tight">
+                    Insights &amp; <span class="text-signal-red">Perspectives</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Expertise in execution. Thoughts on the future of quality, enterprise stability, and technical infrastructure.
+                </p>
+</div>
+</section>
+<!-- Featured Article Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto mb-section-gap">
+<div class="group relative bg-graphite overflow-hidden flex flex-col lg:flex-row min-h-[500px]">
+<div class="lg:w-1/2 relative overflow-hidden">
+<img alt="Future of AI in QA" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A futuristic and highly sophisticated digital landscape representing AI integration. Deep charcoal and graphite colors dominate the scene, with sharp, laser-like beams of signal red light cutting through the space to represent precision and data flow. The composition is minimalist and architectural, reflecting a corporate consulting aesthetic with high-end technological sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3jWKK79x7M_2R-fGmconypkeC7FgiAievCtbUz6O1tPiHkr0axLYz7uS2k27emeF7VTDUhAalvsoZPL0gcNrx8irinLGArOxjTKbtE9ekEIZh2w_IT_iHQTA-hT6MAWCScMphW53ar438W-y2ElaHZANwdyM7o8Fv9ieNpbFtGzkF6zh2OArauKoHXE1FAv5Rwb5Iv1J-eOwhbslL18B3VNvD2RhkKNE8yU1j6SovZRLCbX59PIEl1utVIz-WbTFA5-Egi0AlmUEn"/>
+<div class="absolute inset-0 bg-graphite/40 mix-blend-multiply"></div>
+</div>
+<div class="lg:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-graphite text-platinum">
+<div class="inline-block bg-dept-qa/10 text-dept-qa font-label-sm text-label-sm px-3 py-1 mb-6 border border-dept-qa/20 w-fit">
+                        STRATEGY &amp; AI
+                    </div>
+<h2 class="font-headline-lg text-headline-lg mb-6 leading-tight">
+                        The Future of AI in QA Automation
+                    </h2>
+<p class="font-body-md text-body-md text-on-primary-container mb-8 max-w-lg">
+                        As generative AI reshapes the development lifecycle, we explore how strategic integration of large language models can accelerate quality assurance without compromising enterprise security.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-signal-red text-platinum font-button px-8 py-4 hover:bg-secondary transition-colors flex items-center gap-2">
+                            Read Full Piece
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-primary-container">12 MIN READ</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Grid & Sidebar -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto pb-section-gap">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Articles Grid -->
+<div class="lg:w-2/3">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Post 1 -->
+<div class="bg-platinum border border-surface-variant p-1 transition-all hover:border-signal-red duration-300">
+<div class="h-48 bg-fog relative overflow-hidden mb-6">
+<img alt="ITSM Trends" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A clean, professional data visualization dashboard displayed on a high-resolution screen in a minimalist office. The UI shows complex architectural graphs with a palette of whites, fogs, and vibrant blue accents for IT Service Management metrics. The lighting is bright and clear, emphasizing a modern corporate environment focused on technical clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApc8dSN33-LKzHtEAy-ktq6ouuEOi__U1BJtBfBqFKBN3NstgCBYRgnissqOxeu2_RfherEW64yP5rB4XMM7u-8JEdtNwU6KojqT42vf-v7LvVWMBdL3jOZ7PhRDmbMdkaREyrfxglxvR4Ux99t7yj58Lkj-A_TMUDH1Bt1MZVhdNGaUoTV1Qx7f2SlCJCqQEf0kmgoJOgyNbd4B_o1KsdasJh7zLBXNJWWd9xnm_V0QlZpaTrMfZAlyTU1-5Z3biNKCcFMPEVJNWm"/>
+<div class="absolute top-4 left-4 bg-dept-itsm/10 text-dept-itsm font-label-sm text-label-sm px-2 py-1 border border-dept-itsm/20 backdrop-blur-md">
+                                    ITSM
+                                </div>
+</div>
+<div class="px-5 pb-6">
+<h3 class="font-headline-md text-headline-md text-graphite mb-3 leading-tight">Optimizing ServiceNow for Global Scale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                                    How multinational organizations are unifying their service architecture to reduce operational latency and improve employee experience.
+                                </p>
+<a class="font-button text-signal-red flex items-center gap-1 group" href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="bg-platinum border border-surface-variant p-1 transition-all hover:border-signal-red duration-300">
+<div class="h-48 bg-fog relative overflow-hidden mb-6">
+<img alt="DevOps Automation" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A high-contrast macro photograph of digital circuitry and glowing red fiber optic cables. The image uses a deep graphite background with brilliant signal red highlights, symbolizing speed and DevOps connectivity. The visual style is sharp, clean, and futuristic, following a strict geometric composition for a high-end technical feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1ZfmovlkZ8NrfMymWbOcyvbXUn2Q8j9dccQPRfivIFVA25SOJRYFxLbeDoBJ62RYgKQ0Cim3X3il-jRtiQweLRLCkq2rJl7Chj9LCqd1nleYp0KFLbYysFXCWY1TSHm_iAZqSLx4_WOfAanRIMtGC8auZ4SML9gStekqQ0sXC0WboQrnS_7DR_5hUeLJOfOPFf-3wOgehzPT_oyGc3UyfN0DPuU7PcrxuuxCRQ2SUnf526OlCMgBN5EujlkekeKOsxi9GaBBWXYOB"/>
+<div class="absolute top-4 left-4 bg-dept-dev/10 text-dept-dev font-label-sm text-label-sm px-2 py-1 border border-dept-dev/20 backdrop-blur-md">
+                                    DEVOPS
+                                </div>
+</div>
+<div class="px-5 pb-6">
+<h3 class="font-headline-md text-headline-md text-graphite mb-3 leading-tight">The 2024 State of Continuous Testing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                                    Analysis of the current bottleneck in CI/CD pipelines and why manual testing is becoming the single greatest risk factor in modern software.
+                                </p>
+<a class="font-button text-signal-red flex items-center gap-1 group" href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="bg-platinum border border-surface-variant p-1 transition-all hover:border-signal-red duration-300">
+<div class="h-48 bg-fog relative overflow-hidden mb-6">
+<img alt="Consulting Strategy" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="An overhead view of a clean, minimalist white desk with a high-end laptop, a focused architectural blueprint, and a single cup of black coffee. The scene is lit with bright, natural light, creating an atmosphere of strategic clarity and executive planning. Subtle purple highlights on the blueprint represent departmental consulting tiers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdcNStpMt5glF4aaHG-rkEZzIq1wl6BEq5oiqXrBtVBD4x2guaLBaOtQevSE9MTMruhnNtOIKnoH5HszX9daiSjA7zesAtb-Sr_uTVB_Q57vfQp3X-fVT_oLXBLnZxBoI0tKaB_dcCQYUBobuiEam4FzFkIEQquqnapBfBrpNTvTcFcZY-bURBeAT31MDnB2xD-kx7-NQ0sdyugDd1GP8lw7npRD_RrfzKtsiYy7q1RG7ypz8RFiELaSORbsyQ3DgGPZ6gTeWDhTg"/>
+<div class="absolute top-4 left-4 bg-dept-consulting/10 text-dept-consulting font-label-sm text-label-sm px-2 py-1 border border-dept-consulting/20 backdrop-blur-md">
+                                    STRATEGY
+                                </div>
+</div>
+<div class="px-5 pb-6">
+<h3 class="font-headline-md text-headline-md text-graphite mb-3 leading-tight">Bridging the Gap Between Tech and C-Suite</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                                    Strategies for technology leaders to communicate technical debt and infrastructure investment in terms of business impact.
+                                </p>
+<a class="font-button text-signal-red flex items-center gap-1 group" href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 4 -->
+<div class="bg-platinum border border-surface-variant p-1 transition-all hover:border-signal-red duration-300">
+<div class="h-48 bg-fog relative overflow-hidden mb-6">
+<img alt="Technical Training" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A group of professionals in a high-end, glass-walled conference room participating in a modern technical training workshop. The environment is minimalist and architectural, with large digital displays showing clean data diagrams. Soft white lighting and deep graphite furniture create a sophisticated corporate learning atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZh4QQGF4cTQgo0p-h4KIjxf2Nhu4bn6ZmJX0_7zbxuRGh50_1jd7GlO6SkgLZykTWHiEdSIBkT4DJX4ffc8Y-IivpW2fxmNxPNJqhfEW6GBe5zjXH6_lYMXBXVVdIHLvDMlv7ZPqKU3jIRJPidSN5BhD8DgA8DSgbIgx_3uaK1FGXp3xmLZxML3nusxzZ1zHVIrPgsACH6TFSJtL7AfP1MzlSpOb3WNKwlXuyvcc43uBWRsszOR8mgxmVZ2ckj56UATZ7i0amwM5f"/>
+<div class="absolute top-4 left-4 bg-dept-training/10 text-dept-training font-label-sm text-label-sm px-2 py-1 border border-dept-training/20 backdrop-blur-md">
+                                    TRAINING
+                                </div>
+</div>
+<div class="px-5 pb-6">
+<h3 class="font-headline-md text-headline-md text-graphite mb-3 leading-tight">Scaling Skills in the Era of Acceleration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                                    Rubric's methodology for upskilling QA teams to handle modern automation frameworks and shifting-left requirements.
+                                </p>
+<a class="font-button text-signal-red flex items-center gap-1 group" href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-surface-variant text-graphite hover:border-signal-red hover:text-signal-red transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-graphite text-platinum">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-surface-variant text-graphite hover:border-signal-red transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-surface-variant text-graphite hover:border-signal-red transition-all">3</button>
+<button class="w-10 h-10 flex items-center justify-center border border-surface-variant text-graphite hover:border-signal-red transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="lg:w-1/3 space-y-12">
+<!-- Newsletter Signup -->
+<div class="bg-fog p-8 border-l-4 border-signal-red">
+<h4 class="font-headline-md text-headline-md text-graphite mb-4">Precision Delivered</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Join 5,000+ technology leaders receiving our bi-weekly breakdown of QA and DevOps shifts.
+                        </p>
+<form class="space-y-4">
+<div class="relative">
+<input class="w-full bg-platinum border-b-2 border-slate p-3 focus:outline-none focus:border-signal-red transition-colors placeholder:text-slate/50" placeholder="Work Email Address" type="email"/>
+</div>
+<button class="w-full bg-graphite text-platinum font-button py-4 hover:bg-signal-red transition-colors" type="submit">
+                                SUBSCRIBE TO INSIGHTS
+                            </button>
+</form>
+</div>
+<!-- Trending Topics -->
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-slate mb-6 border-b border-surface-variant pb-2">Trending Topics</h4>
+<div class="flex flex-wrap gap-2">
+<a class="bg-platinum border border-surface-variant px-4 py-2 text-label-sm font-label-sm hover:border-signal-red hover:text-signal-red transition-all" href="#">#QAAutomation</a>
+<a class="bg-platinum border border-surface-variant px-4 py-2 text-label-sm font-label-sm hover:border-signal-red hover:text-signal-red transition-all" href="#">#ServiceNow</a>
+<a class="bg-platinum border border-surface-variant px-4 py-2 text-label-sm font-label-sm hover:border-signal-red hover:text-signal-red transition-all" href="#">#AIOps</a>
+<a class="bg-platinum border border-surface-variant px-4 py-2 text-label-sm font-label-sm hover:border-signal-red hover:text-signal-red transition-all" href="#">#EnterpriseRisk</a>
+<a class="bg-platinum border border-surface-variant px-4 py-2 text-label-sm font-label-sm hover:border-signal-red hover:text-signal-red transition-all" href="#">#ShiftLeft</a>
+<a class="bg-platinum border border-surface-variant px-4 py-2 text-label-sm font-label-sm hover:border-signal-red hover:text-signal-red transition-all" href="#">#DigitalTransformation</a>
+</div>
+</div>
+<!-- Featured Case Study -->
+<div class="relative bg-graphite p-8 text-platinum overflow-hidden min-h-[300px] flex flex-col justify-end">
+<div class="absolute top-0 left-0 w-full h-full opacity-30 grayscale pointer-events-none">
+<img alt="Case Study BG" class="w-full h-full object-cover" data-alt="An abstract, high-tech digital grid representing global data networks. The image features glowing nodes and connections in shades of deep graphite and signal red, reflecting a sense of expansive technological reach and precision execution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAov8VHjGG5LVEiGbo2KJ9nBWgXgO5poGDZnFjHkiWVQy1SJ9n7O8bi3V9F0Qi6wm3IRwjs7Mku5_QkyKAgFzFBiGPwoDZ-g3oNCVLHP9Kq8vonRgnfl1mYntlWpZk_fqzjce7j9yp6Hiz9utpy-ZZ164oyVL-DT5jZbON-Ml3XwGPA8IiPmyWvkFyyzk4vyP6DXcWfjtqZiYN86mYquB5Oer__rE2l3eFKiG08pTgKKGfK_KOVij2KdmknF5s1BYWZYqR9OJylUJGt"/>
+</div>
+<div class="relative z-10">
+<h5 class="font-label-sm text-label-sm text-signal-red mb-2 uppercase">Success Story</h5>
+<h4 class="font-headline-md text-headline-md mb-4">60% Reduction in Release Cycle Time</h4>
+<p class="font-body-md text-body-md text-on-primary-container mb-6">
+                                See how we overhauled the QA pipeline for a Fortune 500 financial institution.
+                            </p>
+<a class="inline-flex items-center gap-2 font-button text-platinum group" href="#">
+                                View Case Study
+                                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Newsletter Bar -->
+<section class="bg-graphite py-12 px-margin-mobile md:px-margin-desktop text-platinum">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Ready to execute with precision?</h3>
+<p class="text-on-primary-container">Speak with a consultant about your technical challenges.</p>
+</div>
+<button class="bg-signal-red text-platinum font-button px-10 py-4 hover:opacity-90 transition-opacity">
+                    BOOK A CONSULTATION
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-graphite py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto w-full">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-platinum mb-6">Rubric Consulting</div>
+<p class="text-on-tertiary-container font-body-md mb-8">
+                    Precision in Execution. Building the structural integrity of modern enterprise software through expert QA and ITSM strategy.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-tertiary-container hover:text-signal-red transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-on-tertiary-container hover:text-signal-red transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-platinum font-bold uppercase tracking-widest text-label-sm mb-6">Departments</h5>
+<ul class="space-y-3">
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>Quality Assurance</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>ITSM Strategy</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>DevOps Enablement</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>Technical Training</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-platinum font-bold uppercase tracking-widest text-label-sm mb-6">Resources</h5>
+<ul class="space-y-3">
+<li><a class="text-platinum font-bold flex items-center group" href="#"><span class="impact-vector"></span>Insights</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>Case Studies</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>Whitepapers</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#"><span class="impact-vector opacity-0 group-hover:opacity-100 transition-opacity"></span>Webinars</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-platinum font-bold uppercase tracking-widest text-label-sm mb-6">Legal &amp; Connect</h5>
+<ul class="space-y-3">
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#">Privacy Policy</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#">Terms of Service</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#">Cookie Policy</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors flex items-center group" href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-surface-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-on-tertiary-container uppercase tracking-widest">
+                © 2024 Rubric Consulting. Precision in Execution.
+            </p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-signal-red"></span>
+<span class="text-label-sm font-label-sm text-platinum">SYSTEMS STABLE</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for scrolling
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+
+        // Simple button hover effect script
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-1px)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

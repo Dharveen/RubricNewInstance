@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partners | Rubric Consulting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed": "#410002",
+                "tertiary-container": "#18222e",
+                "surface-container-high": "#e8e8e8",
+                "secondary-fixed": "#ffdad6",
+                "tertiary": "#030b16",
+                "on-surface": "#1a1c1c",
+                "on-primary-container": "#86888e",
+                "primary-fixed": "#e1e2e9",
+                "error": "#ba1a1a",
+                "outline-variant": "#c6c6cb",
+                "signal-red": "#E53935",
+                "primary-container": "#1e2126",
+                "on-background": "#1a1c1c",
+                "primary-fixed-dim": "#c4c6cd",
+                "tertiary-fixed-dim": "#bdc7d7",
+                "surface": "#f9f9f9",
+                "graphite": "#1E2126",
+                "inverse-surface": "#2f3131",
+                "platinum": "#FFFFFF",
+                "surface-dim": "#dadada",
+                "on-tertiary-fixed": "#121c28",
+                "on-error": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#191c21",
+                "dept-qa": "#E53935",
+                "secondary-container": "#db322f",
+                "dept-itsm": "#FFB020",
+                "outline": "#76777b",
+                "dept-dev": "#2563EB",
+                "on-secondary": "#ffffff",
+                "background": "#f9f9f9",
+                "surface-container-highest": "#e2e2e2",
+                "on-secondary-container": "#fffbff",
+                "tertiary-fixed": "#d9e3f3",
+                "secondary": "#b7131a",
+                "dept-consulting": "#7C3AED",
+                "secondary-fixed-dim": "#ffb4ac",
+                "surface-container-low": "#f3f3f3",
+                "inverse-on-surface": "#f1f1f1",
+                "dept-training": "#14B8A6",
+                "surface-bright": "#f9f9f9",
+                "on-secondary-fixed-variant": "#93000d",
+                "fog": "#F2F2F2",
+                "on-primary-fixed-variant": "#44474c",
+                "surface-variant": "#e2e2e2",
+                "slate": "#687280",
+                "on-error-container": "#93000a",
+                "surface-tint": "#5c5e64",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-container": "#7f8998",
+                "on-tertiary-fixed-variant": "#3e4854",
+                "error-container": "#ffdad6",
+                "on-surface-variant": "#45474b",
+                "on-primary": "#ffffff",
+                "surface-container": "#eeeeee",
+                "primary": "#070a0e",
+                "inverse-primary": "#c4c6cd"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "base": "8px",
+                "margin-desktop": "80px",
+                "section-gap": "120px"
+            },
+            "fontFamily": {
+                "headline-md": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "headline-xl": ["Hanken Grotesk"],
+                "headline-lg": ["Hanken Grotesk"],
+                "label-sm": ["JetBrains Mono"],
+                "body-md": ["Hanken Grotesk"],
+                "button": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .impact-bullet {
+            width: 12px;
+            height: 2px;
+            background-color: #E53935;
+            display: inline-block;
+            margin-right: 8px;
+            transform: rotate(-45deg);
+        }
+        .card-hover-effect:hover {
+            border-color: #E53935;
+            background-color: #F2F2F2;
+        }
+    </style>
+</head>
+<body class="bg-platinum text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<header class="bg-platinum dark:bg-graphite fixed top-0 w-full z-50 border-b border-surface-variant dark:border-tertiary-container flat no shadows">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-[1200px] mx-auto w-full">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-platinum tracking-tighter">Rubric Consulting</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-signal-red transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-signal-red transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-signal-red transition-colors font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-signal-red transition-colors font-body-md text-body-md" href="#">Careers</a>
+</div>
+<button class="bg-signal-red text-platinum font-button text-button px-6 py-3 rounded-[4px] hover:opacity-90 transition-opacity">Contact Us</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center bg-graphite overflow-hidden">
+
+<div class="relative z-10 max-w-[1200px] mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-signal-red uppercase tracking-widest mb-4 block">Ecosystem &amp; Alliances</span>
+<h1 class="font-headline-xl text-headline-xl text-platinum mb-6">A strategic ecosystem for technical excellence.</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">We don't just use tools; we master them. Rubric unites world-class platforms with architectural precision to solve the most complex enterprise challenges.</p>
+</div>
+</div>
+</section>
+<!-- Featured Partner: Atlassian -->
+<section class="py-section-gap bg-platinum">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-[#0052CC] rounded-[4px] flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">widgets</span>
+</div>
+<span class="font-headline-md text-headline-md text-graphite">Atlassian Strategic Partner</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-graphite mb-6">Engineering Quality through Managed Suite Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Rubric leverages the Atlassian stack not just as software, but as the central nervous system for delivery quality. From Jira's structured workflows to Confluence's knowledge architecture, we build environments where execution is measurable and precise.</p>
+<div class="space-y-4 mb-10">
+<div class="flex items-start">
+<span class="impact-bullet mt-3"></span>
+<div>
+<h4 class="font-body-md font-bold text-graphite">Jira Service Management</h4>
+<p class="text-on-surface-variant">Automated governance and ITSM alignment for high-velocity teams.</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="impact-bullet mt-3"></span>
+<div>
+<h4 class="font-body-md font-bold text-graphite">Bitbucket &amp; Bamboo CI/CD</h4>
+<p class="text-on-surface-variant">Integrated code quality gates and automated deployment pipelines.</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="impact-bullet mt-3"></span>
+<div>
+<h4 class="font-body-md font-bold text-graphite">Confluence Information Architecture</h4>
+<p class="text-on-surface-variant">Structured documentation that serves as a living blueprint for your enterprise.</p>
+</div>
+</div>
+</div>
+<button class="bg-graphite text-platinum font-button text-button px-8 py-4 rounded-[4px] border-b-2 border-transparent hover:border-signal-red transition-all">Explore Atlassian Solutions</button>
+</div>
+<div class="order-1 md:order-2 bg-fog p-12 flex justify-center items-center border border-outline-variant relative">
+<div class="absolute top-4 left-4 w-12 h-12 border-t border-l border-signal-red"></div>
+<div class="absolute bottom-4 right-4 w-12 h-12 border-b border-r border-signal-red"></div>
+<img alt="Professional workshop with digital displays" class="w-full grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional enterprise boardroom setting with high-end tech integration. Large digital displays show complex architectural diagrams of software ecosystems in vibrant Atlassian blue and Rubric red. The lighting is soft and architectural, emphasizing high-end consulting professionalism and precision engineering. A sense of technological sophistication and collaborative focus fills the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqI2HBjA_yUXoDpUhUSelfStsh9v7T3iUfZp-cUPso5yVmFTxcBjEpUUHjD2P7SHIh5CdiFX5d51EibFMORu-b4gfP8ccB2RPxmMyq_NgzS0D7dIb2DsALK-TxsG5chzezGSq7ejb-o37fl1o0GppF1fXcovNBXJDBG7qHawl0fyZrxrwpqTtAFN6Bx7G-i_3HVUjQ13HyNncI8abJqeWwCvOyI03JCNVUoXGJgN65yu8FEb9j7UVwYUzbKudD4MiOloNce4Jlu1l5"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Grid Section -->
+<section class="py-section-gap bg-fog">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-signal-red uppercase tracking-widest mb-2 block">Our Alliances</span>
+<h2 class="font-headline-lg text-headline-lg text-graphite">The Strategic Tech Grid</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Partner Card 1 -->
+<div class="bg-platinum border border-outline-variant p-8 card-hover-effect transition-all duration-300 flex flex-col justify-between h-64">
+<div>
+<div class="w-12 h-12 bg-dept-dev/10 text-dept-dev mb-6 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">cloud</span>
+</div>
+<h3 class="font-body-md font-bold text-graphite mb-2">Cloud Infrastructure</h3>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Scalable DevOps &amp; Managed Hosting</p>
+</div>
+<!-- Partner Card 2 -->
+<div class="bg-platinum border border-outline-variant p-8 card-hover-effect transition-all duration-300 flex flex-col justify-between h-64">
+<div>
+<div class="w-12 h-12 bg-dept-qa/10 text-dept-qa mb-6 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<h3 class="font-body-md font-bold text-graphite mb-2">Cybersecurity Systems</h3>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Zero-Trust Network Architecture</p>
+</div>
+<!-- Partner Card 3 -->
+<div class="bg-platinum border border-outline-variant p-8 card-hover-effect transition-all duration-300 flex flex-col justify-between h-64">
+<div>
+<div class="w-12 h-12 bg-dept-itsm/10 text-dept-itsm mb-6 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<h3 class="font-body-md font-bold text-graphite mb-2">Big Data &amp; AI</h3>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Predictive Modeling &amp; Insights</p>
+</div>
+<!-- Partner Card 4 -->
+<div class="bg-platinum border border-outline-variant p-8 card-hover-effect transition-all duration-300 flex flex-col justify-between h-64">
+<div>
+<div class="w-12 h-12 bg-dept-training/10 text-dept-training mb-6 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h3 class="font-body-md font-bold text-graphite mb-2">Automation RPA</h3>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Optimized Workflow Execution</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How We Partner: Bento Grid -->
+<section class="py-section-gap bg-platinum">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-graphite">How we partner.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Integration is not just about APIs; it's about architectural alignment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 bg-graphite p-12 relative overflow-hidden group">
+
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm text-signal-red mb-4 block">01. STRATEGIC</span>
+<h3 class="font-headline-md text-headline-md text-platinum mb-6">Deep Technical Integration</h3>
+<p class="text-on-primary-container max-w-lg">We don't provide shallow overlays. Rubric partners are selected for their ability to integrate at the core architectural level, ensuring data integrity and performance across your entire stack.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-fog p-12 border border-outline-variant flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-graphite mb-4 block">02. RESILIENT</span>
+<h3 class="font-body-lg font-bold text-graphite mb-4">Scalability Gates</h3>
+<p class="text-on-surface-variant">Every partnership is stress-tested against enterprise-level scale demands.</p>
+</div>
+<div class="md:col-span-4 bg-fog p-12 border border-outline-variant flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-graphite mb-4 block">03. AUDITED</span>
+<h3 class="font-body-lg font-bold text-graphite mb-4">Compliance Alignment</h3>
+<p class="text-on-surface-variant">Mandatory security vetting for all software and service alliances.</p>
+</div>
+<div class="md:col-span-8 bg-surface-container p-12 border border-outline-variant flex items-center">
+<div class="grid grid-cols-2 gap-8 w-full">
+<div>
+<h4 class="font-headline-md text-headline-md text-graphite">99.9%</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Uptime SLA commitment</p>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-graphite">24/7</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Joint operations support</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap bg-graphite relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-desktop text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-platinum mb-8">Ready to join the ecosystem?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-2xl mx-auto">Rubric seeks partners who prioritize engineering excellence and measurable impact. If your technology aligns with our standard of precision, let's talk.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-signal-red text-platinum font-button text-button px-10 py-5 rounded-[4px] hover:scale-[1.02] transition-transform">Partner with Rubric</button>
+<button class="border border-platinum text-platinum font-button text-button px-10 py-5 rounded-[4px] hover:bg-platinum hover:text-graphite transition-colors">Download Ecosystem Specs</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-graphite dark:bg-tertiary w-full py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1200px] mx-auto w-full">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-platinum mb-6">Rubric</div>
+<p class="text-on-tertiary-container font-body-md text-body-md leading-relaxed">Precision in execution. Architectural rigor in technology consulting.</p>
+</div>
+<div>
+<h4 class="text-signal-red font-label-sm text-label-sm uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md" href="#">Insights</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md" href="#">Partners</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-signal-red font-label-sm text-label-sm uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-signal-red font-label-sm text-label-sm uppercase tracking-widest mb-6">Connect</h4>
+<a class="text-on-tertiary-container hover:text-platinum transition-colors font-body-md flex items-center gap-2 group" href="#">
+                    LinkedIn
+                    <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-desktop mt-12 pt-12 border-t border-primary-container">
+<p class="text-on-tertiary-container font-label-sm text-label-sm">© 2024 Rubric Consulting. Precision in Execution.</p>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.card-hover-effect').forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>
