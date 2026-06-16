@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Rubric | The Architecture of Software Quality</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#030b16",
+                        "on-primary-container": "#86888e",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#1e2126",
+                        "dept-training": "#14B8A6",
+                        "secondary-container": "#db322f",
+                        "surface": "#f9f9f9",
+                        "primary": "#070a0e",
+                        "on-primary": "#ffffff",
+                        "dept-dev": "#2563EB",
+                        "outline-variant": "#c6c6cb",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#b7131a",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-container": "#fffbff",
+                        "signal-red": "#E53935",
+                        "secondary-fixed": "#ffdad6",
+                        "on-primary-fixed": "#191c21",
+                        "slate": "#687280",
+                        "surface-dim": "#dadada",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#c4c6cd",
+                        "on-error-container": "#93000a",
+                        "dept-itsm": "#FFB020",
+                        "fog": "#F2F2F2",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#bdc7d7",
+                        "on-tertiary-container": "#7f8998",
+                        "surface-container-low": "#f3f3f3",
+                        "platinum": "#FFFFFF",
+                        "graphite": "#1E2126",
+                        "outline": "#76777b",
+                        "dept-consulting": "#7C3AED",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "on-tertiary-fixed-variant": "#3e4854",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed": "#d9e3f3",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#c4c6cd",
+                        "surface-tint": "#5c5e64",
+                        "primary-fixed": "#e1e2e9",
+                        "on-secondary-fixed": "#410002",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#121c28",
+                        "on-surface-variant": "#45474b",
+                        "on-primary-fixed-variant": "#44474c",
+                        "error": "#ba1a1a",
+                        "dept-qa": "#E53935",
+                        "tertiary-container": "#18222e",
+                        "surface-variant": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "button": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .impact-line {
+            width: 2px;
+            height: 24px;
+            background-color: #E53935;
+            transform: skewX(-20deg);
+            display: inline-block;
+            margin-right: 12px;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body class="bg-platinum text-graphite overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-platinum/90 backdrop-blur-md border-b border-surface-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-graphite">rubric</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-secondary font-bold border-b-2 border-secondary pb-1" href="#">About</a>
+<a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Services</a>
+<a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Careers</a>
+</div>
+<button class="bg-signal-red text-platinum px-6 py-2 rounded-DEFAULT font-button text-button hover:bg-secondary transition-all active:scale-95 duration-200">
+                Contact Us
+            </button>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden bg-graphite">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-graphite via-graphite/90 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="A low-angle architectural photograph of a high-end corporate skyscraper with sharp geometric glass facets against a clear sky. The image is rendered in deep graphite and stark platinum tones, creating a mood of stability and professional rigor. Strategic high-contrast lighting emphasizes the precision of the building's structural lines, mirroring the rubric brand's architectural execution style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ZCSyf2CYxyhkMSbkpdmGUImC4A0bAXoaoLuq1mfyJ14WL3AG1QjX624hWOuK47ZUQ3K7IPhGg1EUU4kSSYnp-5fH0m07YTUKR8zIKkP8YNlBhxDL4PeyXcvc1U80N-RW59A2ttCktAdrwqifYKCU4QssAUNrpkgdgOlGebdzAStRr0egeky18tVB86XL1V8-X_UDwBHg6nhJlPtlJ9o6LmfR2-XpSBeDg6rITn7R_RxrJ09pl9uF6Xjs75YSnD2PGo_DblATsivI"/>
+</div>
+<div class="relative z-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-signal-red mb-4 block tracking-widest">ARCHITECTURAL EXECUTION</span>
+<h1 class="font-headline-xl text-headline-xl text-platinum mb-6 leading-tight">The Rubric Way</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-lg">
+                        Since 2007, we have pioneered the structural approach to software quality engineering, transforming enterprise chaos into measurable certainty.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="h-[1px] w-12 bg-signal-red"></div>
+<span class="font-label-sm text-label-sm text-platinum uppercase tracking-widest">Founded 2007</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Company Story -->
+<section class="py-section-gap bg-platinum">
+<div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 reveal-hidden" id="story-text">
+<h2 class="font-headline-md text-headline-md mb-8">Engineering Digital Resilience Since 2007</h2>
+<div class="space-y-6 text-on-surface-variant font-body-md text-body-md">
+<p>Rubric Consulting was founded on the principle that software quality is not a final check, but a foundational requirement. Over nearly two decades, we have evolved alongside the world's most complex digital ecosystems.</p>
+<p>Our journey began in the high-stakes environment of enterprise quality assurance. Today, we stand as specialists in Quality Engineering, Application Management Services, and Strategic Technical Consulting.</p>
+<p>We don't just find defects; we engineer environments where they cannot thrive. This is our legacy: decades of meticulous precision applied to the ever-shifting landscape of digital transformation.</p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 relative">
+<div class="aspect-square bg-fog border border-outline-variant p-12 flex flex-col justify-between">
+<div class="font-headline-xl text-headline-xl text-signal-red font-bold">17+</div>
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-graphite">Years of Specialized Focus</h3>
+<p class="font-body-md text-body-md text-slate">Consistently delivering quality assurance and technical excellence for Global 500 enterprises across financial services, healthcare, and retail sectors.</p>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-graphite hidden md:block"></div>
+</div>
+</div>
+</section>
+<!-- Mission & Values -->
+<section class="py-section-gap bg-graphite text-platinum overflow-hidden">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-md text-headline-md mb-4">Core Principles</h2>
+<div class="h-1 w-12 bg-signal-red mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="border-l border-on-primary-container/20 pl-8 space-y-4 py-8 hover:border-signal-red transition-colors group">
+<span class="font-label-sm text-label-sm text-signal-red group-hover:pl-2 transition-all">VALUE ONE</span>
+<h3 class="font-headline-md text-headline-md">Precision, Quality, Assurance</h3>
+<p class="font-body-md text-body-md text-on-primary-container">We operate with surgical exactness. Our methodology ensures that every line of code and every business requirement aligns perfectly with the overarching mission, leaving no room for operational ambiguity.</p>
+</div>
+<div class="border-l border-on-primary-container/20 pl-8 space-y-4 py-8 hover:border-signal-red transition-colors group">
+<span class="font-label-sm text-label-sm text-signal-red group-hover:pl-2 transition-all">VALUE TWO</span>
+<h3 class="font-headline-md text-headline-md">Continuous Evolution</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Stability is not static. We champion the concept of 'Evolutionary Infrastructure'—systems and processes that are built to adapt, scale, and thrive in a state of constant technological flux.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Logic: Impact & Structure -->
+<section class="py-section-gap bg-platinum">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant">
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant">
+<div class="font-label-sm text-label-sm text-slate mb-8">01 / FOUNDATION</div>
+<h4 class="font-headline-md text-headline-md mb-6">Structure</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Defining the architectural rigidness required for enterprise-grade software. We build the rubric against which all success is measured.</p>
+</div>
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant bg-fog">
+<div class="font-label-sm text-label-sm text-signal-red mb-8">02 / PROCESS</div>
+<h4 class="font-headline-md text-headline-md mb-6">Transformation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The kinetic stage where strategy meets execution. We migrate legacy mindsets into modern, automated, and agile delivery pipelines.</p>
+</div>
+<div class="p-12 bg-graphite text-platinum">
+<div class="font-label-sm text-label-sm text-secondary-fixed-dim mb-8">03 / RESULT</div>
+<h4 class="font-headline-md text-headline-md mb-6">Impact</h4>
+<p class="font-body-md text-body-md text-on-primary-container">The measurable outcome of our involvement. Reduced time-to-market, zero-defect releases, and total digital confidence for your leadership.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Rubric: Enterprise Experience -->
+<section class="py-section-gap bg-fog">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-md text-headline-md mb-6">Specialized Enterprise Delivery</h2>
+<p class="font-body-lg text-body-lg text-slate">Our expertise isn't broad; it's deep. We specialize in the complex, the mission-critical, and the high-scale.</p>
+</div>
+<a class="font-label-sm text-label-sm text-graphite border-b border-graphite pb-1 hover:text-signal-red hover:border-signal-red transition-all" href="#">VIEW OUR CAPABILITIES</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-platinum p-8 border-t-2 border-dept-dev flex flex-col h-full">
+<span class="material-symbols-outlined text-dept-dev mb-6" style="font-size: 32px;">verified_user</span>
+<h5 class="font-headline-md text-[20px] mb-4">Quality Engineering</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Moving beyond QA into automated, predictive quality modeling.</p>
+<div class="mt-auto flex items-center text-signal-red">
+<span class="impact-line"></span>
+<span class="font-label-sm text-label-sm">TRANSFORMED</span>
+</div>
+</div>
+<div class="bg-platinum p-8 border-t-2 border-dept-itsm flex flex-col h-full">
+<span class="material-symbols-outlined text-dept-itsm mb-6" style="font-size: 32px;">settings_suggest</span>
+<h5 class="font-headline-md text-[20px] mb-4">ITSM &amp; DevOps</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Harmonizing operations and development for fluid value streams.</p>
+<div class="mt-auto flex items-center text-signal-red">
+<span class="impact-line"></span>
+<span class="font-label-sm text-label-sm">OPTIMIZED</span>
+</div>
+</div>
+<div class="bg-platinum p-8 border-t-2 border-dept-consulting flex flex-col h-full">
+<span class="material-symbols-outlined text-dept-consulting mb-6" style="font-size: 32px;">strategy</span>
+<h5 class="font-headline-md text-[20px] mb-4">Strategic Advisory</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Board-level technical strategy to drive digital competitive advantage.</p>
+<div class="mt-auto flex items-center text-signal-red">
+<span class="impact-line"></span>
+<span class="font-label-sm text-label-sm">ALIGNED</span>
+</div>
+</div>
+<div class="bg-platinum p-8 border-t-2 border-dept-training flex flex-col h-full">
+<span class="material-symbols-outlined text-dept-training mb-6" style="font-size: 32px;">model_training</span>
+<h5 class="font-headline-md text-[20px] mb-4">Training &amp; Enablement</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Scaling knowledge through the Rubric Academy framework.</p>
+<div class="mt-auto flex items-center text-signal-red">
+<span class="impact-line"></span>
+<span class="font-label-sm text-label-sm">SCALED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team & Culture -->
+<section class="py-section-gap bg-platinum">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-[4/5] bg-fog relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="A candid, professional photograph of high-end software consultants collaborating in a modern, brightly lit office. The scene features diverse professionals in minimalist, smart-casual attire gathered around a sleek glass table with laptops. The lighting is crisp and natural, highlighting a sophisticated workspace with deep graphite accents and clean white walls, embodying the rubric consulting brand's focus on specialist talent and elite culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuPeajSXL4PcyfJb_mQ_Gx7C4fVmT03rWbmc6nPQq2do5R2YjAOvXTkUTiJRofjr49UJ7XzoTKR82bFbZi5DhJlPvBOTl6U_M_iNSdRK25svIIWFErFVShSnf7MKkWXiCuwXFZeJdMDiAXMPBGfEo4yPCJI9Ej_w7CTdgCBGLPVUb5TQtrRRu4t9KjrGKyRbnfNLwJUja_Hoor9sc1nt6rGxtGvg5CIOovVURXBmU7LflVpHMtxjGs9Z3QGlns9CbBIqH0obr3OKFl"/>
+</div>
+<div class="absolute -top-12 -left-12 w-48 h-48 border-2 border-signal-red -z-10 opacity-20"></div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<span class="font-label-sm text-label-sm text-signal-red tracking-widest">ELITE TALENT</span>
+<h2 class="font-headline-md text-headline-md">Specialists, Not Generalists</h2>
+<p class="font-body-lg text-body-lg text-slate">At Rubric, we don't hire 'resources'. We cultivate high-end specialist talent—engineers and consultants who possess both the technical depth and the strategic foresight to navigate enterprise complexity.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-signal-red mt-1" style="font-size: 20px;">check_circle</span>
+<span class="font-body-md text-body-md">Culture of extreme ownership and technical pride.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-signal-red mt-1" style="font-size: 20px;">check_circle</span>
+<span class="font-body-md text-body-md">Continuous education via Rubric Academy mentorship.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-signal-red mt-1" style="font-size: 20px;">check_circle</span>
+<span class="font-body-md text-body-md">Specialized teams mapped to industry domains.</span>
+</li>
+</ul>
+<button class="bg-graphite text-platinum px-8 py-4 rounded-DEFAULT font-button text-button hover:bg-signal-red transition-all group flex items-center gap-2">
+                            JOIN THE TEAM
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="py-section-gap bg-graphite relative overflow-hidden">
+
+<div class="relative z-10 px-margin-desktop max-w-7xl mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-platinum mb-8">Ready to Architect Your Success?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-12">
+                    Connect with our strategic consultants to define your path toward digital certainty and quality engineering excellence.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-signal-red text-platinum px-10 py-5 rounded-DEFAULT font-button text-button hover:bg-secondary transition-all">REQUEST A CONSULTATION</button>
+<button class="border border-platinum text-platinum px-10 py-5 rounded-DEFAULT font-button text-button hover:bg-platinum hover:text-graphite transition-all">VIEW CASE STUDIES</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-base bg-graphite border-t border-on-tertiary-container/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-platinum mb-6">rubric</div>
+<p class="font-body-md text-body-md text-on-tertiary-container pr-4">Crafting sustainable digital ecosystems through architectural rigor and precision engineering.</p>
+</div>
+<div>
+<h6 class="font-label-sm text-label-sm text-platinum mb-6 tracking-widest">SOLUTIONS</h6>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Quality Engineering</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">DevOps Strategy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Enterprise AMS</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Digital Transformation</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm text-label-sm text-platinum mb-6 tracking-widest">RESOURCES</h6>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Case Studies</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Rubric Academy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Insights &amp; Blog</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Documentation</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm text-label-sm text-platinum mb-6 tracking-widest">LEGAL</h6>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-7xl mx-auto mt-20 pt-8 border-t border-on-tertiary-container/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-tertiary-container">© 2024 Rubric Consulting. Crafting Sustainable Digital Ecosystems.</span>
+<div class="flex gap-6">
+<a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined">group</span></a>
+<a class="text-on-tertiary-container hover:text-secondary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('reveal-hidden');
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-hidden').forEach(el => observer.observe(el));
+
+        // Navigation interaction micro-effects
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                if (!link.classList.contains('text-secondary')) {
+                    link.style.transform = 'translateY(-1px)';
+                }
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Rubric Consulting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#030b16",
+                "on-primary-container": "#86888e",
+                "surface-container-highest": "#e2e2e2",
+                "primary-container": "#1e2126",
+                "dept-training": "#14B8A6",
+                "secondary-container": "#db322f",
+                "surface": "#f9f9f9",
+                "primary": "#070a0e",
+                "on-primary": "#ffffff",
+                "dept-dev": "#2563EB",
+                "outline-variant": "#c6c6cb",
+                "on-surface": "#1a1c1c",
+                "on-error": "#ffffff",
+                "secondary-fixed-dim": "#ffb4ac",
+                "inverse-on-surface": "#f1f1f1",
+                "on-background": "#1a1c1c",
+                "secondary": "#b7131a",
+                "background": "#f9f9f9",
+                "surface-container": "#eeeeee",
+                "on-secondary-container": "#fffbff",
+                "signal-red": "#E53935",
+                "secondary-fixed": "#ffdad6",
+                "on-primary-fixed": "#191c21",
+                "slate": "#687280",
+                "surface-dim": "#dadada",
+                "inverse-surface": "#2f3131",
+                "inverse-primary": "#c4c6cd",
+                "on-error-container": "#93000a",
+                "dept-itsm": "#FFB020",
+                "fog": "#F2F2F2",
+                "surface-container-high": "#e8e8e8",
+                "tertiary-fixed-dim": "#bdc7d7",
+                "on-tertiary-container": "#7f8998",
+                "surface-container-low": "#f3f3f3",
+                "platinum": "#FFFFFF",
+                "graphite": "#1E2126",
+                "outline": "#76777b",
+                "dept-consulting": "#7C3AED",
+                "on-secondary-fixed-variant": "#93000d",
+                "on-tertiary-fixed-variant": "#3e4854",
+                "surface-bright": "#f9f9f9",
+                "tertiary-fixed": "#d9e3f3",
+                "on-secondary": "#ffffff",
+                "primary-fixed-dim": "#c4c6cd",
+                "surface-tint": "#5c5e64",
+                "primary-fixed": "#e1e2e9",
+                "on-secondary-fixed": "#410002",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed": "#121c28",
+                "on-surface-variant": "#45474b",
+                "on-primary-fixed-variant": "#44474c",
+                "error": "#ba1a1a",
+                "dept-qa": "#E53935",
+                "tertiary-container": "#18222e",
+                "surface-variant": "#e2e2e2"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "section-gap": "120px",
+                "base": "8px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "headline-md": ["Hanken Grotesk"],
+                "body-md": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "headline-xl": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "button": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .dept-border-qa { border-top-width: 2px; border-color: #E53935; }
+        .dept-border-itsm { border-top-width: 2px; border-color: #FFB020; }
+        .dept-border-dev { border-top-width: 2px; border-color: #2563EB; }
+        .dept-border-consulting { border-top-width: 2px; border-color: #7C3AED; }
+        .dept-border-training { border-top-width: 2px; border-color: #14B8A6; }
+
+        .impact-chevron::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 2px;
+            background-color: #E53935;
+            margin-right: 8px;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-platinum font-body-md text-graphite selection:bg-signal-red selection:text-platinum">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-platinum/90 backdrop-blur-md border-b border-surface-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-graphite">rubric</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">About</a>
+<a class="font-label-sm text-label-sm text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Services</a>
+<a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Careers</a>
+<button class="bg-signal-red text-platinum font-button text-button px-6 py-3 rounded active:scale-95 duration-200 uppercase tracking-wider">Contact Us</button>
+</div>
+<button class="md:hidden text-graphite">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden bg-graphite">
+
+<div class="relative z-10 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="max-w-3xl">
+<span class="font-label-sm text-label-sm text-signal-red uppercase tracking-[0.2em] mb-4 block">Strategic Architecture</span>
+<h1 class="font-headline-xl text-headline-xl text-platinum mb-6">Services designed for measurable digital impact</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl">
+                        Precision-engineered solutions for enterprise stability, technical excellence, and sustainable digital growth. We bridge the gap between architectural rigor and operational success.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-desktop max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md text-graphite mb-4">Core Competencies</h2>
+<p class="text-slate font-body-md">Our multidisciplinary approach ensures that every facet of your digital ecosystem is optimized for performance, security, and scalability.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-dept-qa/10 text-dept-qa font-label-sm text-label-sm rounded-full">QA</span>
+<span class="px-3 py-1 bg-dept-itsm/10 text-dept-itsm font-label-sm text-label-sm rounded-full">ITSM</span>
+<span class="px-3 py-1 bg-dept-dev/10 text-dept-dev font-label-sm text-label-sm rounded-full">DEV</span>
+<span class="px-3 py-1 bg-dept-consulting/10 text-dept-consulting font-label-sm text-label-sm rounded-full">STRATEGY</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- QA & Testing Assessments (Large) -->
+<div class="md:col-span-8 bg-fog p-10 dept-border-qa group hover:bg-platinum transition-colors border border-surface-variant duration-300">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-dept-qa">analytics</span>
+<span class="font-label-sm text-label-sm text-dept-qa uppercase font-bold">QA Assessment</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">QA &amp; Testing Assessments</h3>
+<p class="text-slate mb-8 max-w-md">Comprehensive diagnostic audits of your current testing protocols to identify bottlenecks and security vulnerabilities.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-graphite font-label-sm text-label-sm"><span class="impact-chevron"></span>Maturity Benchmarking</li>
+<li class="flex items-center text-graphite font-label-sm text-label-sm"><span class="impact-chevron"></span>Risk Analysis Reports</li>
+<li class="flex items-center text-graphite font-label-sm text-label-sm"><span class="impact-chevron"></span>Optimization Roadmap</li>
+</ul>
+<a class="inline-flex items-center text-signal-red font-button text-button group-hover:translate-x-2 transition-transform" href="#">EXPLORE QA ASSESSMENT <span class="material-symbols-outlined ml-2">arrow_forward</span></a>
+</div>
+<!-- ITSM (Tall) -->
+<div class="md:col-span-4 bg-fog p-8 dept-border-itsm border border-surface-variant">
+<span class="material-symbols-outlined text-4xl text-dept-itsm mb-6">settings_suggest</span>
+<h3 class="font-headline-md text-headline-md mb-4">ITSM</h3>
+<p class="text-slate mb-6">Aligning IT services with business needs through rigorous ITIL-aligned management frameworks.</p>
+<div class="mt-auto pt-8 border-t border-outline-variant/30">
+<p class="font-label-sm text-label-sm text-dept-itsm font-bold">SERVICE MANAGEMENT</p>
+</div>
+</div>
+<!-- QA Consulting -->
+<div class="md:col-span-4 bg-fog p-8 dept-border-qa border border-surface-variant">
+<span class="material-symbols-outlined text-4xl text-dept-qa mb-6">psychology</span>
+<h3 class="text-2xl font-bold mb-4">QA Consulting</h3>
+<p class="text-slate">Strategic advisory to embed quality-first culture into your delivery pipeline.</p>
+</div>
+<!-- Test Automation -->
+<div class="md:col-span-4 bg-fog p-8 dept-border-qa border border-surface-variant">
+<span class="material-symbols-outlined text-4xl text-dept-qa mb-6">precision_manufacturing</span>
+<h3 class="text-2xl font-bold mb-4">Test Automation</h3>
+<p class="text-slate">Robust frameworks built to scale, reducing regression time and human error.</p>
+</div>
+<!-- Development -->
+<div class="md:col-span-4 bg-graphite p-8 dept-border-dev border border-white/10 text-platinum">
+<span class="material-symbols-outlined text-4xl text-dept-dev mb-6">code</span>
+<h3 class="text-2xl font-bold mb-4">Development</h3>
+<p class="text-on-primary-container">Architectural excellence in software engineering, focused on clean code and durability.</p>
+</div>
+<!-- Technical Consulting -->
+<div class="md:col-span-6 bg-fog p-8 dept-border-consulting border border-surface-variant">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-4xl text-dept-consulting">architecture</span>
+<h3 class="text-2xl font-bold">Specialist Technical Consulting</h3>
+</div>
+<p class="text-slate mb-6">Bespoke technical strategies for cloud migration, infrastructure overhaul, and legacy system modernization.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-dept-consulting/5 text-dept-consulting text-[10px] font-bold border border-dept-consulting/20 uppercase">Cloud</span>
+<span class="px-2 py-1 bg-dept-consulting/5 text-dept-consulting text-[10px] font-bold border border-dept-consulting/20 uppercase">Security</span>
+<span class="px-2 py-1 bg-dept-consulting/5 text-dept-consulting text-[10px] font-bold border border-dept-consulting/20 uppercase">Scale</span>
+</div>
+</div>
+<!-- Staff Augmentation -->
+<div class="md:col-span-6 bg-fog p-8 dept-border-consulting border border-surface-variant">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-4xl text-dept-consulting">group_add</span>
+<h3 class="text-2xl font-bold">Staff Augmentation</h3>
+</div>
+<p class="text-slate">Embedded experts who integrate seamlessly into your teams to accelerate delivery speed.</p>
+</div>
+<!-- Managed Testing Services -->
+<div class="md:col-span-3 bg-fog p-6 dept-border-qa border border-surface-variant">
+<h4 class="font-bold text-xl mb-3">Managed Testing</h4>
+<p class="text-sm text-slate">End-to-end testing ownership, allowing your teams to focus on core innovation.</p>
+</div>
+<!-- Software Support -->
+<div class="md:col-span-3 bg-fog p-6 dept-border-dev border border-surface-variant">
+<h4 class="font-bold text-xl mb-3">Software Support</h4>
+<p class="text-sm text-slate">24/7 technical oversight and maintenance for enterprise applications.</p>
+</div>
+<!-- R&D -->
+<div class="md:col-span-3 bg-fog p-6 dept-border-consulting border border-surface-variant">
+<h4 class="font-bold text-xl mb-3">R&amp;D</h4>
+<p class="text-sm text-slate">Exploring the frontier of AI and ML to give your business a competitive edge.</p>
+</div>
+<!-- Training -->
+<div class="md:col-span-3 bg-dept-training p-6 border border-dept-training text-platinum">
+<h4 class="font-bold text-xl mb-3">Training</h4>
+<p class="text-sm opacity-90">Upskilling your internal workforce in modern DevOps and QA methodologies.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container py-24 px-margin-desktop overflow-hidden relative">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg text-graphite mb-6">Ready to architect your success?</h2>
+<p class="text-slate font-body-lg mb-8">Consult with our specialists to define a service package tailored to your organization's specific technical maturity.</p>
+<div class="flex gap-4">
+<button class="bg-signal-red text-platinum px-8 py-4 font-button text-button rounded active:scale-95 duration-200">SCHEDULE CONSULTATION</button>
+<button class="border border-graphite text-graphite px-8 py-4 font-button text-button rounded hover:bg-graphite hover:text-platinum transition-all">VIEW CASE STUDIES</button>
+</div>
+</div>
+<div class="flex-1 w-full relative aspect-square md:aspect-video rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Modern minimal office" class="w-full h-full object-cover" data-alt="A bright, minimalist executive boardroom with clean lines and architectural glass elements. The room is flooded with natural morning light, creating a high-contrast environment with deep shadows and brilliant highlights. In the center, a polished graphite table reflects the geometric patterns of the ceiling. The atmosphere is professional, sophisticated, and focused, emphasizing the brand's architectural rigor and corporate identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo1j_MpbW-ei30dZSPrS7U8fzAdzTzJpNXRRoZ2is-6t9E5mpfD22TMmSxalsomoWAV31HenNanUzyCNMrAiX4OuKyarETwmO97W8bQoLK1ikjK5ChimyAVQ3h7w7Hfm-AiZCuR9c5RpILtWIscJ1poddKlPJbWirTS6sDUWaDH_2zWJhbpHXalABGbDMowOeEVoPqUKVp7VbLpurIomnOq8cTwXPygQ_h1kGC4b9j7_S3pQfJB0bQybbNyTe_kpxVOrp8TxYFdrq6"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-base bg-graphite border-t border-on-tertiary-container/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md font-bold text-platinum">rubric</div>
+<p class="font-body-md text-body-md text-on-primary-container">
+                    Crafting Sustainable Digital Ecosystems through architectural precision and strategic execution.
+                </p>
+</div>
+<div>
+<h5 class="text-platinum font-bold mb-6 font-label-sm text-label-sm uppercase tracking-widest">Navigation</h5>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Home</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">About</a></li>
+<li><a class="font-label-sm text-label-sm text-secondary-fixed-dim font-bold transition-colors" href="#">Services</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-platinum font-bold mb-6 font-label-sm text-label-sm uppercase tracking-widest">Expertise</h5>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">QA Assessment</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">ITSM Management</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">DevOps Strategy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Software Engineering</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-platinum font-bold mb-6 font-label-sm text-label-sm uppercase tracking-widest">Connect</h5>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">LinkedIn</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Twitter</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors" href="#">Clutch</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop mt-24 flex flex-col md:flex-row justify-between border-t border-on-tertiary-container/10 pt-8 gap-4">
+<p class="font-label-sm text-label-sm text-on-tertiary-container">© 2024 Rubric Consulting. Crafting Sustainable Digital Ecosystems.</p>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors underline decoration-transparent hover:decoration-platinum" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors underline decoration-transparent hover:decoration-platinum" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors underline decoration-transparent hover:decoration-platinum" href="#">Cookie Policy</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-platinum transition-colors underline decoration-transparent hover:decoration-platinum" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+<script>
+        // Intersection Observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
