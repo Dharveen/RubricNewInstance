@@ -1,62 +1,76 @@
 import { Link } from 'react-router-dom';
+import { Share2, Mail, Globe } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-graphite text-white pt-20 pb-10">
+    <footer className="bg-graphite text-white pt-32 pb-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-1">
-            <img
-              src="/assets/rubric-logo-primary.png"
-              alt="Rubric Logo"
-              className="h-8 w-auto brightness-0 invert mb-6"
-            />
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Premium technology consulting and software quality engineering. We bring structure, transformation, and measurable impact to your digital ecosystem.
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+
+          {/* Brand Column */}
+          <div className="col-span-1 md:col-span-1 flex flex-col gap-8">
+            <Link to="/" className="flex items-center gap-3 group">
+              <img
+                src="/assets/rubric-logo-primary.png"
+                alt="Rubric Logo"
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <span className="text-2xl font-bold tracking-tight text-white group-hover:text-signal-red transition-colors">rubric</span>
+            </Link>
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+              Crafting sustainable digital ecosystems. Delivering precision software quality since 2007 through architectural rigor and strategic impact.
             </p>
+            <div className="flex gap-6">
+              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Share2 size={20} /></a>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Mail size={20} /></a>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Globe size={20} /></a>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation Column */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
-            <ul className="space-y-4 text-slate-400">
-              <li><Link to="/about" className="hover:text-signal-red transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-signal-red transition-colors">Our Services</Link></li>
-              <li><Link to="/careers" className="hover:text-signal-red transition-colors">Careers</Link></li>
-              <li><Link to="/contact" className="hover:text-signal-red transition-colors">Contact</Link></li>
+            <h5 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-8">Navigation</h5>
+            <ul className="space-y-4">
+              <li><Link to="/" className="text-sm text-slate-400 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/services" className="text-sm text-slate-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/careers" className="text-sm text-slate-400 hover:text-white transition-colors font-bold text-signal-red">Careers</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Solutions Column */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Our Expertise</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
-              <li>Software Quality Engineering</li>
-              <li>Digital Transformation Consulting</li>
-              <li>Developer Experience (DevX)</li>
-              <li>IT Service Management</li>
-              <li>Specialized Training</li>
+            <h5 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-8">Solutions</h5>
+            <ul className="space-y-4">
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Quality Engineering</a></li>
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">DevOps Strategy</a></li>
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Enterprise AMS</a></li>
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Digital Transformation</a></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Legal Column */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Get in Touch</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
-              <li>Email: info@rubric.co.za</li>
-              <li>Location: Johannesburg, South Africa</li>
-              <li>Cape Town, South Africa</li>
+            <h5 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-8">Legal</h5>
+            <ul className="space-y-4">
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">Sitemap</a></li>
             </ul>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs">
-          <p>© {new Date().getFullYear()} Rubric (Pty) Ltd. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500">
+            © {new Date().getFullYear()} Rubric Consulting. Crafting Sustainable Digital Ecosystems.
+          </p>
+          <div className="flex gap-8 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+             <a href="#" className="hover:text-white transition-colors">Johannesburg</a>
+             <a href="#" className="hover:text-white transition-colors">Mauritius</a>
+             <a href="#" className="hover:text-white transition-colors">London</a>
           </div>
         </div>
       </div>
