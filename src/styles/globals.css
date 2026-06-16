@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-graphite antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-signal-red text-white px-6 py-3 rounded-sm font-semibold hover:bg-opacity-90 transition-all;
+  }
+
+  .btn-secondary {
+    @apply border border-graphite text-graphite px-6 py-3 rounded-sm font-semibold hover:bg-graphite hover:text-white transition-all;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-12;
+  }
+}
