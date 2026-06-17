@@ -1,117 +1,218 @@
-# Rubric Website - Critical User Flows & Gherkin AC
+# Rubric Website Redesign - Critical User Flows & Gherkin AC
 
-This document outlines the primary user journeys identified within the Rubric website redesign, providing User Stories and Acceptance Criteria in Gherkin format for testing and development alignment.
+This document provides a verified mapping of user journeys based on the Stitch prototype designs and the current React implementation.
 
 ---
 
-## 1. Lead Generation: Service Discovery to Consultation
+## 1. System Overview
+
+### 1.1 Implemented React Routes (Source: src/App.tsx)
+- `/`: Home Page
+- `/about`: About Us
+- `/services`: Specialized Services
+- `/platform`: Enterprise Platform
+- `/case-studies`: Proof Matrix / Case Studies
+- `/insights`: Insights & Blog
+- `/partners`: Strategic Ecosystem
+- `/careers`: Career Collective
+- `/contact`: Global Reach / Contact
+
+### 1.2 Available Stitch Prototype Screens (Source: Stitch Project 15142750776367027933)
+- **Homepage**: Rubric Consulting | Homepage
+- **About**: About Us | Rubric Consulting
+- **Services**: Our Services | Rubric Consulting
+- **Platform**: Rubric Consulting Enterprise Platform
+- **Case Studies**: Case Studies | Rubric Consulting
+- **Insights**: Insights & Blog | Rubric Consulting
+- **Partners**: Partners | Rubric Consulting
+- **Careers**: Careers | Rubric Consulting
+- **Contact**: Contact Us | Rubric Consulting
+- **QA Specialized**: QA & Testing Assessments | Rubric Consulting
+
+---
+
+## 2. Critical User Flows
+
+### 2.1 Flow: Enterprise Service Inquiry
+**Source:** Present in both Stitch and React website
+
 **User Story:**
-As a potential enterprise client, I want to explore Rubric's specialized services so that I can understand how their engineering rigor can solve my business challenges and contact them for a consultation.
+As a potential client, I want to navigate from the home page to the services page and eventually contact Rubric so that I can inquire about their SQE services.
 
 **Gherkin Acceptance Criteria:**
 ```gherkin
-Feature: Lead Generation
-  Scenario: Potential client navigates from services to contact
-    Given I am on the Rubric Home page
-    When I click the "SERVICES" button in the hero section
-    Then I should be redirected to the /services page
-    And I should see specialized service tiers like "Quality Assurance" and "IT Service Management"
-    When I click the "SCHEDULE CONSULTATION" button at the bottom of the Services page
-    Then I should be redirected to the /contact page
-    And I should see the contact form with fields for "Professional Email" and "Inquiry Department"
+Feature: Enterprise Service Inquiry
+  Scenario: Visitor navigates to Contact via Services
+    Given I am on the Home page ("/")
+    When I click on the "SERVICES" link in the Navbar
+    Then I should be redirected to the Services page ("/services")
+    And I should see the heading "Specialized Service Tiers"
+    When I click the "SCHEDULE CONSULTATION" button
+    Then I should be redirected to the Contact page ("/contact")
+    And I should see the "Let's build better digital" headline
 ```
 
-## 2. Enterprise Platform Engagement
+**QA Validation Notes:**
+- Verify that the Navbar "Services" link correctly routes to `/services`.
+- Verify that the "SCHEDULE CONSULTATION" button on the Services page correctly routes to `/contact`.
+
+---
+
+### 2.2 Flow: Technical Platform Evaluation
+**Source:** Present in both Stitch and React website
+
 **User Story:**
-As a CTO or Technical Lead, I want to evaluate the Rubric Enterprise Platform's architectural control features so that I can decide if it's suitable for our software delivery lifecycle.
+As a Technical Lead, I want to review the Enterprise Platform's technical metrics and request access so that I can evaluate its architectural control capabilities.
 
 **Gherkin Acceptance Criteria:**
 ```gherkin
-Feature: Platform Engagement
-  Scenario: Technical lead requests access to the enterprise platform
-    Given I am on the Enterprise Platform page (/platform)
-    Then I should see the "Architectural Control" headline
-    And I should see technical metrics like "Uptime SLA (99.99%)" and "Data Encryption (AES-256)"
+Feature: Platform Evaluation
+  Scenario: Tech Lead reviews metrics and requests access
+    Given I am on the Enterprise Platform page ("/platform")
+    Then I should see metrics for "Uptime SLA", "Data Encryption", "Global Nodes", and "Support Cycle"
+    And I should see the heading "Architectural Control."
     When I click the "REQUEST ACCESS" button
-    Then I should be navigated to the contact section or form
-    And the "Inquiry Department" should ideally be selectable or relevant to platform access
+    Then a request action should be initiated (current implementation: button present)
 ```
 
-## 3. Proof of Value: Case Study Exploration
+**QA Validation Notes:**
+- Verify the presence of the 4 key metrics (99.99%, AES-256, 12+, 24/7) on the `/platform` page.
+
+---
+
+### 2.3 Flow: Career Discovery & Application
+**Source:** Present in both Stitch and React website
+
 **User Story:**
-As a Procurement Manager, I want to review Rubric's past successes and impact metrics so that I can verify their track record before committing to a partnership.
+As a Senior Engineer, I want to explore Rubric's culture and view open roles so that I can apply to join the collective.
 
 **Gherkin Acceptance Criteria:**
 ```gherkin
-Feature: Proof of Value
-  Scenario: User explores case study impact metrics
-    Given I am on the Case Studies page (/case-studies)
-    When I scroll to the "Automated Precision for Enterprise Finance" case study
-    Then I should see the impact metric "90% Failure Reduction"
-    And I should see a "READ FULL STORY" link
-    When I click the "READ FULL STORY" link
-    Then I should be directed to the contact page to inquire about similar results
-```
-
-## 4. Talent Acquisition: Career Application
-**User Story:**
-As a Senior Engineer, I want to find open roles at Rubric and understand their "Elite Culture" so that I can apply to join their technical collective.
-
-**Gherkin Acceptance Criteria:**
-```gherkin
-Feature: Talent Acquisition
-  Scenario: Candidate views open roles and applies
-    Given I am on the Careers page (/careers)
-    Then I should see the "Rubric Academy" section describing growth by design
+Feature: Career Discovery
+  Scenario: Candidate views culture and roles
+    Given I am on the Careers page ("/careers")
+    Then I should see the "Join the Collective." hero heading
+    And I should see the "Rubric Academy" section
     When I scroll to the "Current Openings" section
-    And I select "Engineering" from the department filter
-    Then I should see roles like "Senior SQE Consultant"
+    Then I should see job openings like "Senior SQE Consultant"
     When I click the "SEND SPECULATIVE CV" button
-    Then my default email client should open addressed to "careers@rubric.co.za"
+    Then a mailto link to "careers@rubric.co.za" should be triggered
 ```
 
-## 5. Global Presence & Direct Contact
+---
+
+### 2.4 Flow: Global Office Verification
+**Source:** Present in both Stitch and React website
+
 **User Story:**
-As a local business partner, I want to find Rubric's physical office locations and direct contact details so that I can reach out to them via phone or visit their office.
+As a business partner, I want to verify Rubric's physical presence in Johannesburg and Mauritius so that I can coordinate regional engagements.
 
 **Gherkin Acceptance Criteria:**
 ```gherkin
-Feature: Contact & Presence
-  Scenario: Partner finds office location and contact details
-    Given I am on the Contact page (/contact)
-    Then I should see office details for "Johannesburg" and "Grand Baie"
-    And I should see a physical address for "The District, 8 Arnold Rd, Rosebank"
-    When I click on the phone number link for the South Africa office
-    Then the system should initiate a phone call to "+27 11 000 0000"
-    When I fill out the contact form and click "SEND MESSAGE"
-    Then the system should validate the input and show a success confirmation (UI implementation pending)
+Feature: Office Verification
+  Scenario: Visitor checks office addresses
+    Given I am on the Contact page ("/contact")
+    Then I should see office details for "Johannesburg" (South Africa)
+    And I should see office details for "Grand Baie" (Mauritius)
+    And Johannesburg address should be "The District, 8 Arnold Rd, Rosebank"
 ```
 
-## 6. Strategic Partnership Exploration
+---
+
+### 2.5 Flow: Header Navigation & Branding
+**Source:** Present in both Stitch and React website
+
 **User Story:**
-As a technology provider, I want to understand Rubric's partnership ecosystem and alignment standards so that I can propose a strategic alliance.
+As a site visitor, I want to use the header navigation and see the brand logo so that I can easily move between pages and identify the company.
 
 **Gherkin Acceptance Criteria:**
 ```gherkin
-Feature: Partnership Exploration
-  Scenario: Tech provider explores partnership requirements
-    Given I am on the Partners page (/partners)
-    Then I should see the "Strategic Tech Grid"
-    And I should see partnership pillars like "Deep Technical Integration" and "Compliance Alignment"
-    When I click the "Partner with Rubric" button
-    Then I should be redirected to a partnership inquiry form or email contact
+Feature: Header Navigation
+  Scenario: Visitor uses navbar links and logo
+    Given I am on any page
+    Then I should see the Rubric logo in the Navbar
+    When I click the Rubric logo
+    Then I should be redirected to the Home page ("/")
+    When I click "About" in the Navbar
+    Then I should be redirected to the About page ("/about")
+    When I click the "CONTACT" button in the Navbar
+    Then I should be redirected to the Contact page ("/contact")
 ```
 
-## 7. Knowledge Discovery (Insights)
+---
+
+### 2.6 Flow: Mobile Navigation
+**Source:** Present in both Stitch and React website
+
 **User Story:**
-As an industry peer, I want to read Rubric's technical insights and success stories so that I can stay updated on SQE and digital transformation trends.
+As a mobile user, I want to use a mobile-friendly menu so that I can navigate the site on my smartphone.
 
 **Gherkin Acceptance Criteria:**
 ```gherkin
-Feature: Knowledge Discovery
-  Scenario: User reads featured insights
-    Given I am on the Insights page (/insights)
-    Then I should see a list of technical articles and featured success stories
-    When I click on a featured case study (e.g., "60% Reduction in Release Cycle Time")
-    Then I should be redirected to the detailed Case Study page
+Feature: Mobile Navigation
+  Scenario: Visitor uses mobile menu
+    Given I am on the Home page with a mobile viewport width
+    Then I should see a menu toggle icon (hamburger)
+    When I click the menu toggle icon
+    Then I should see the mobile navigation overlay with links to "About", "Services", "Platform", etc.
+    When I click "Services" in the mobile menu
+    Then the menu should close and I should be redirected to the Services page ("/services")
 ```
+
+---
+
+### 2.7 Flow: Footer Exploration
+**Source:** Present in both Stitch and React website
+
+**User Story:**
+As a site visitor, I want to use the footer links to find information about the company's social presence and legal details.
+
+**Gherkin Acceptance Criteria:**
+```gherkin
+Feature: Footer Exploration
+  Scenario: Visitor checks footer content
+    Given I am at the bottom of any page
+    Then I should see the Rubric logo in the Footer
+    And I should see social links (LinkedIn, Twitter, GitHub)
+    And I should see "Specialized Units" and "Core Navigation" columns
+```
+
+---
+
+### 2.8 Flow: Brand Construction & About Page
+**Source:** Present in both Stitch and React website
+
+**User Story:**
+As a potential partner, I want to read about the company's history and mission so that I can understand their values.
+
+**Gherkin Acceptance Criteria:**
+```gherkin
+Feature: Company History
+  Scenario: Visitor reads the About page
+    Given I am on the About page ("/about")
+    Then I should see the "Precision is our foundation." hero heading
+    And I should see the "Established 2007" metric
+    And I should see the "Global Vision" section
+```
+
+---
+
+## 3. Prototype-only flows / Future implementation
+
+### 3.1 Flow: Specialized QA Assessment Deep-Dive
+**Source:** Available in Stitch prototype only (Screen: "QA & Testing Assessments")
+
+**Description:**
+The Stitch prototype includes a dedicated "QA & Testing Assessments" landing page with granular service breakdowns for "Test Strategy", "Automation Frameworks", and "Performance Engineering".
+
+**User Story:**
+As a QA Director, I want a dedicated page for SQE assessments so that I can deep-dive into Rubric's specific testing methodologies.
+
+---
+
+## 4. Gap Analysis: Stitch Design vs. Implemented Website
+
+1.  **QA Specialized Page**: Stitch has a dedicated "QA & Testing Assessments" screen which is currently not a separate route in the React app. It is likely part of the broader `/services` page in the current implementation or planned for future rollout.
+2.  **Navigation Interactions**: The Stitch prototype implies complex hover states for the "Impact Vector" (Signal Red diagonal line), while the React app has basic hover transitions.
+3.  **Data Persistence**: The Contact form in React is visually complete but requires backend integration for the "SEND MESSAGE" action.
+4.  **Case Study Filtering**: Stitch implies a filter bar for case studies by sector (Financial Services, etc.). This is visually present in React but might need functional refinement for dynamic filtering.
