@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Partners from './pages/Partners';
 import Insights from './pages/Insights';
 import CaseStudies from './pages/CaseStudies';
+import EnterprisePlatform from './pages/EnterprisePlatform';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/platform" element={<EnterprisePlatform />} />
           </Routes>
         </main>
         <Footer />
