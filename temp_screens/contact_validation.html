@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Rubric | Architectural Digital Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#030b16",
+                      "on-primary-container": "#86888e",
+                      "surface-container-highest": "#e2e2e2",
+                      "primary-container": "#1e2126",
+                      "dept-training": "#14B8A6",
+                      "secondary-container": "#db322f",
+                      "surface": "#f9f9f9",
+                      "primary": "#070a0e",
+                      "on-primary": "#ffffff",
+                      "dept-dev": "#2563EB",
+                      "outline-variant": "#c6c6cb",
+                      "on-surface": "#1a1c1c",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#ffb4ac",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-background": "#1a1c1c",
+                      "secondary": "#b7131a",
+                      "background": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "on-secondary-container": "#fffbff",
+                      "signal-red": "#E53935",
+                      "secondary-fixed": "#ffdad6",
+                      "on-primary-fixed": "#191c21",
+                      "slate": "#687280",
+                      "surface-dim": "#dadada",
+                      "inverse-surface": "#2f3131",
+                      "inverse-primary": "#c4c6cd",
+                      "on-error-container": "#93000a",
+                      "dept-itsm": "#FFB020",
+                      "fog": "#F2F2F2",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-fixed-dim": "#bdc7d7",
+                      "on-tertiary-container": "#7f8998",
+                      "surface-container-low": "#f3f3f3",
+                      "platinum": "#FFFFFF",
+                      "graphite": "#1E2126",
+                      "outline": "#76777b",
+                      "dept-consulting": "#7C3AED",
+                      "on-secondary-fixed-variant": "#93000d",
+                      "on-tertiary-fixed-variant": "#3e4854",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-fixed": "#d9e3f3",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#c4c6cd",
+                      "surface-tint": "#5c5e64",
+                      "primary-fixed": "#e1e2e9",
+                      "on-secondary-fixed": "#410002",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#121c28",
+                      "on-surface-variant": "#45474b",
+                      "on-primary-fixed-variant": "#44474c",
+                      "error": "#ba1a1a",
+                      "dept-qa": "#E53935",
+                      "tertiary-container": "#18222e",
+                      "surface-variant": "#e2e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "label-sm": ["JetBrains Mono"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "headline-xl": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Hanken Grotesk"],
+                      "button": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .input-group:focus-within label {
+            color: #b7131a;
+        }
+        .premium-input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid #c6c6cb;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        .premium-input:focus {
+            border-bottom: 1px solid #070a0e;
+            box-shadow: none;
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-platinum text-graphite font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-platinum/90 backdrop-blur-md border-b border-surface-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-3"><img alt="Rubric Logo" class="h-[80px] w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClIswL_EUMZV2EmnGW0uKuNgoZF-W4LVFKet3NAEaldUf18F9gykdqPemDnNkjNRH2brRSvA7Aot2LsE6Day9O_4Ccx2NZGGFTVfD3WtCso-zPmFe5UOD0G5aYDBUe67V2CutB_D0TntxIlogRCEO_Fyw8mv2lBxOJnX9nxWMdh2GFvDCX8Y3QrYcMk5RZ7ABxGm87-HeILmOvg9qZZgVuFvGJp-MWlyw21KzEGeWbITpippeI4YfBiiKBv4hThl3BZ7WiDQem-Owq"/><span class="font-headline-lg text-4xl font-bold tracking-tighter text-graphite lowercase">rubric</span></div>
+<div class="hidden md:flex items-center space-x-12"><a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Home</a><a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">About</a><a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Services</a><a class="font-label-sm text-label-sm text-slate hover:text-graphite transition-colors" href="#">Careers</a><a class="font-label-sm text-label-sm text-secondary font-bold border-b border-secondary pb-1" href="#">Contact Us</a></div>
+<button class="md:hidden text-graphite">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 max-w-7xl mx-auto">
+<div class="max-w-3xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-4 block">Get In Touch</span>
+<h1 class="font-headline-xl text-headline-xl mb-8 leading-tight">Let’s engineer your digital advantage.</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl leading-relaxed">
+                We partner with enterprise leaders to architect stable, scalable, and sophisticated digital ecosystems. Reach out to start a conversation about your project requirements.
+            </p>
+</div>
+</section>
+<!-- Main Grid: Form + Office Details -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<!-- Contact Form Container -->
+<div class="lg:col-span-7 bg-white p-10 md:p-16 border border-surface-variant/50 shadow-sm">
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="flex flex-col input-group">
+<label class="font-label-sm text-label-sm text-slate uppercase tracking-wider mb-2 transition-colors" for="first_name">First Name</label>
+<input class="premium-input focus:ring-0 placeholder:text-outline-variant/50 border-secondary" id="first_name" name="first_name" placeholder="John" type="text"/><p class="text-signal-red text-label-sm mt-2">First name is required</p>
+</div>
+<div class="flex flex-col input-group">
+<label class="font-label-sm text-label-sm text-slate uppercase tracking-wider mb-2 transition-colors" for="last_name">Last Name</label>
+<input class="premium-input focus:ring-0 placeholder:text-outline-variant/50 border-secondary" id="last_name" name="last_name" placeholder="Doe" type="text"/><p class="text-signal-red text-label-sm mt-2">Last name is required</p>
+</div>
+</div>
+<div class="flex flex-col input-group">
+<label class="font-label-sm text-label-sm text-slate uppercase tracking-wider mb-2 transition-colors" for="email">Work Email</label>
+<input class="premium-input focus:ring-0 placeholder:text-outline-variant/50 border-secondary" id="email" name="email" placeholder="john.doe@enterprise.com" type="email"/><p class="text-signal-red text-label-sm mt-2">Professional email is required</p>
+</div>
+<div class="flex flex-col input-group">
+<label class="font-label-sm text-label-sm text-slate uppercase tracking-wider mb-2 transition-colors" for="department">Inquiry Type</label>
+<select class="premium-input focus:ring-0 appearance-none bg-no-repeat bg-[right_0_center] border-secondary" id="department" name="department">
+<option disabled="" selected="" value="">How can we help?</option>
+<option value="qa">Quality Assurance (QA)</option>
+<option value="dev">Software Development</option>
+<option value="itsm">IT Service Management</option>
+<option value="consulting">Strategic Consulting</option>
+</select><p class="text-signal-red text-label-sm mt-2">Inquiry department is required</p>
+</div>
+<div class="flex flex-col input-group">
+<label class="font-label-sm text-label-sm text-slate uppercase tracking-wider mb-2 transition-colors" for="message">Project Brief</label>
+<textarea class="premium-input focus:ring-0 placeholder:text-outline-variant/50 resize-none border-secondary" id="message" name="message" placeholder="Tell us about your goals..." rows="3"></textarea><p class="text-signal-red text-label-sm mt-2">Message is required</p>
+</div>
+<div class="pt-4">
+<button class="bg-graphite text-white font-button text-button py-5 px-16 hover:bg-secondary transition-all flex items-center group" type="submit">
+<span class="">Send Message</span>
+<span class="material-symbols-outlined ml-3 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Office Details & Global Presence -->
+<div class="lg:col-span-5 space-y-12">
+<!-- Johannesburg Office -->
+<div class="group">
+<div class="border-l-2 border-secondary pl-8 py-2">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.15em]">South Africa</span>
+<span class="material-symbols-outlined text-slate group-hover:text-secondary transition-colors">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6 font-bold">Johannesburg</h3>
+<address class="not-italic space-y-6 text-on-primary-container font-body-md">
+<div class="space-y-1">
+<p class="">The District, 8 Arnold Rd</p>
+<p class="">Rosebank, 2196</p>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="flex items-center text-graphite hover:text-secondary transition-colors" href="tel:+27110000000">
+<span class="material-symbols-outlined mr-4 text-slate">call</span>
+                                    +27 11 000 0000
+                                </a>
+<a class="flex items-center text-graphite hover:text-secondary transition-colors" href="mailto:jhb@rubric.com">
+<span class="material-symbols-outlined mr-4 text-slate">mail</span>
+                                    jhb@rubric.com
+                                </a>
+</div>
+</address>
+</div>
+</div>
+<!-- Mauritius Office -->
+<div class="group">
+<div class="border-l-2 border-surface-variant pl-8 py-2 hover:border-secondary transition-colors">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm text-slate uppercase tracking-[0.15em]">Mauritius</span>
+<span class="material-symbols-outlined text-slate group-hover:text-secondary transition-colors">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6 font-bold">Grand Baie</h3>
+<address class="not-italic space-y-6 text-on-primary-container font-body-md">
+<div class="space-y-1">
+<p class="">Grand Baie Business Quarter</p>
+<p class="">Chemin Vingt Pieds</p>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="flex items-center text-graphite hover:text-secondary transition-colors" href="tel:+2300000000">
+<span class="material-symbols-outlined mr-4 text-slate">call</span>
+                                    +230 000 0000
+                                </a>
+<a class="flex items-center text-graphite hover:text-secondary transition-colors" href="mailto:mau@rubric.com">
+<span class="material-symbols-outlined mr-4 text-slate">mail</span>
+                                    mau@rubric.com
+                                </a>
+</div>
+</address>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Placeholder Section -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-7xl mx-auto">
+<div class="relative w-full aspect-[21/7] bg-white border border-surface-variant/50 overflow-hidden group">
+<!-- Modern Subtle Grid Background -->
+<div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#1E2126 1.5px, transparent 1.5px); background-size: 32px 32px;"></div>
+<!-- Styled Modern Map -->
+<img alt="Modern enterprise location map" class="w-full h-full object-cover filter grayscale contrast-[1.1] brightness-[1.02] opacity-40 transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCULGPiEUYAb_Z14Tb7VozZcl_2axZXH3UdfXgw7TpEnaw8g5dC0EAhCfktxviSuMOQHCPbqNbTv_x1oHvqZW94As0EuZox2UpP7YYUnZi84uVlbEk49bv7djzrkLeChGJ9WsvslQLeoVffIVB032Q8Ba_KfQxwYehO9Z5knbm9Nx3E2jSkGfHA0N502DofES5BjLrp9gl2dUiQKO-xm0RijvQXrSDHhy9Jy_a1D9dfVlbgRwy5Wf2AQLdT3IUuPDkbW43fklLP203e"/>
+<!-- Subtle Overlay -->
+<div class="absolute inset-0 bg-gradient-to-r from-platinum/40 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-graphite text-white px-8 py-6 shadow-2xl border border-white/10 text-center backdrop-blur-sm bg-opacity-95">
+<p class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest">HQ Hub</p>
+<p class="font-body-md font-bold text-lg">Johannesburg, South Africa</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-graphite pt-32 pb-12 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-margin-desktop max-w-7xl mx-auto mb-24">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md font-bold text-white mb-6 block">rubric</span>
+<p class="text-slate text-body-md leading-relaxed">
+                Architecting the future of enterprise software through precision engineering and strategic insight.
+            </p>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-white uppercase tracking-[0.2em] mb-8">Services</h4>
+<ul class="space-y-5 text-slate">
+<li class=""><a class="hover:text-white transition-colors" href="#">Quality Assurance</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Software Development</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">ITSM Solutions</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Consulting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-white uppercase tracking-[0.2em] mb-8">Company</h4>
+<ul class="space-y-5 text-slate">
+<li class=""><a class="hover:text-white transition-colors" href="#">About Rubric</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Case Studies</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-white uppercase tracking-[0.2em] mb-8">Follow</h4>
+<div class="flex space-x-6 text-slate">
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Twitter</a>
+<a class="hover:text-white transition-colors" href="#">Medium</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-12 px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate">
+<p class="font-label-sm text-label-sm mb-6 md:mb-0">© 2024 Rubric Consulting. Crafting Sustainable Digital Ecosystems.</p>
+<div class="flex space-x-10">
+<a class="font-label-sm text-label-sm hover:text-white" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm hover:text-white" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+    // Premium interaction feedback
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const originalContent = btn.innerHTML;
+
+        btn.innerHTML = '<span>TRANSMITTING...</span>';
+        btn.classList.add('opacity-50', 'pointer-events-none');
+
+        setTimeout(() => {
+            btn.innerHTML = '<span>MESSAGE RECEIVED</span><span class="material-symbols-outlined ml-3">check_circle</span>';
+            btn.classList.remove('opacity-50');
+            btn.classList.add('bg-dept-training');
+
+            setTimeout(() => {
+                btn.innerHTML = originalContent;
+                btn.classList.remove('bg-dept-training', 'pointer-events-none');
+                e.target.reset();
+            }, 3000);
+        }, 1500);
+    });
+</script>
+</body></html>
