@@ -34,7 +34,7 @@ This document outlines the critical user journeys, supporting user stories, and 
 ### FL-02: Service Exploration (Bento Navigation)
 *   **User Story:** As a **CIO/CTO**, I want to browse Rubric’s specialized service domains through an intuitive grid, so that I can quickly identify which engineering pillar aligns with my organization's technical needs.
 *   **Acceptance Criteria:**
-    *   **AC 1:** Given the user is on the Home page, the specialized domains section must display interactive cards for the core SQE pillars.
+    *   **AC 1:** Given the user is on the Home page, the specialized domains section must display interactive cards for the core software quality engineering pillars.
     *   **AC 2:** When the user clicks the secondary navigation button in the Hero, they must be navigated to the services landing page.
     *   **AC 3:** Interaction with individual service cards must provide clear visual feedback or navigation to detailed service descriptions.
 
@@ -115,69 +115,66 @@ The recommended next step for this project is to:
 ### FL-01: Hero Conversion
 - **Test Case ID:** TC-01-01
 - **Flow ID:** FL-01
-- **Scenario:** Verify primary "CONTACT US" CTA navigation.
+- **Scenario:** Verify primary conversion CTA navigation.
 - **Test Type:** Happy Path
 - **Priority:** Critical
 - **Preconditions:** User is on the Home page.
 - **Test Steps:**
   1. Navigate to the Home page.
-  2. Locate the primary "CONTACT US" button in the Hero section.
-  3. Click the button.
+  2. Locate and click the primary "CONTACT US" button in the Hero section.
 - **Test Data:** N/A
 - **Expected Result:** The application navigates to the `/contact` route and the Contact page is rendered.
 
 - **Test Case ID:** TC-01-02
 - **Flow ID:** FL-01
-- **Scenario:** Verify Hero tagline branding and typography.
+- **Scenario:** Verify Hero tagline text accuracy and visual styling.
 - **Test Type:** UI / Branding
 - **Priority:** High
 - **Preconditions:** User is on the Home page.
 - **Test Steps:**
   1. Observe the Hero section main headline.
-  2. Verify the text matches the tagline: "Structured quality. Measurable digital impact."
-  3. Verify font family is Hanken Grotesk.
+  2. Verify the text matches the approved tagline: "Structured quality. Measurable digital impact."
+  3. Verify that font usage is consistent with the implemented brand identity.
 - **Test Data:** N/A
-- **Expected Result:** Tagline matches requirements and branding font is applied correctly.
+- **Expected Result:** Tagline matches requirements. Headlines use the approved primary font family as per the design system (e.g., Inter or Hanken Grotesk).
 
 ### FL-02: Service Exploration
 - **Test Case ID:** TC-02-01
 - **Flow ID:** FL-02
-- **Scenario:** Verify Bento Grid card interactivity on Desktop.
+- **Scenario:** Verify Bento Grid card interactivity.
 - **Test Type:** Happy Path / UI
 - **Priority:** High
 - **Preconditions:** User is on the Home page.
 - **Test Steps:**
   1. Scroll to the "Specialised Department Domains" section.
-  2. Hover over any domain card (e.g., QA, ITSM).
+  2. Hover over or click any domain card (e.g., QA, ITSM, DEV).
 - **Test Data:** N/A
-- **Expected Result:** Card displays a visual hover effect (e.g., scale or shadow) to indicate interactivity.
+- **Expected Result:** Card displays visual feedback (e.g., scale or color shift) to indicate interactivity.
 
 - **Test Case ID:** TC-02-02
 - **Flow ID:** FL-02
-- **Scenario:** Verify "SERVICES" secondary CTA navigation.
+- **Scenario:** Verify secondary "SERVICES" CTA navigation.
 - **Test Type:** Happy Path
 - **Priority:** High
 - **Preconditions:** User is on the Home page.
 - **Test Steps:**
-  1. Locate the "SERVICES" button in the Hero section.
-  2. Click the button.
+  1. Locate and click the secondary navigation button in the Hero section.
 - **Test Data:** N/A
 - **Expected Result:** The application navigates to the `/services` route.
 
 ### FL-03: Strategic Inquiry
 - **Test Case ID:** TC-03-01
 - **Flow ID:** FL-03
-- **Scenario:** Verify successful population of the Contact form.
+- **Scenario:** Verify successful population of the Contact form fields.
 - **Test Type:** Happy Path
 - **Priority:** Critical
 - **Preconditions:** User is on the Contact page.
 - **Test Steps:**
   1. Enter values for First Name, Last Name, and Professional Email.
-  2. Select "Software Development (DEV)" from the Inquiry Department dropdown.
-  3. Enter text in the message field.
-  4. Click "SEND MESSAGE".
+  2. Select a department from the Inquiry Department dropdown.
+  3. Enter text in the message/requirements field and click the submission button.
 - **Test Data:** Name: "John Doe", Email: "john.doe@enterprise.com".
-- **Expected Result:** Form inputs are accepted. (Actual backend submission logic: To be confirmed).
+- **Expected Result:** Form fields accept inputs without validation errors. Actual backend submission behavior to be confirmed against implementation.
 
 - **Test Case ID:** TC-03-02
 - **Flow ID:** FL-03
@@ -186,11 +183,10 @@ The recommended next step for this project is to:
 - **Priority:** High
 - **Preconditions:** User is on the Contact page.
 - **Test Steps:**
-  1. Leave the "Professional Email" field empty.
-  2. Fill in all other required fields.
-  3. Click "SEND MESSAGE".
+  1. Fill in all fields except "Professional Email".
+  2. Click the submission button.
 - **Test Data:** N/A
-- **Expected Result:** Form prevents submission and displays a validation alert/message for the Email field.
+- **Expected Result:** Form prevents submission and displays a validation alert/message for the mandatory field.
 
 ### FL-04: Talent Acquisition
 - **Test Case ID:** TC-04-01
@@ -201,9 +197,10 @@ The recommended next step for this project is to:
 - **Preconditions:** User is on the Careers page.
 - **Test Steps:**
   1. Scroll down to the "Current Openings" section.
-  2. Select "Engineering" from the department dropdown.
-- **Test Data:** N/A
-- **Expected Result:** The list of roles updates to display only engineering-related positions.
+  2. Open the department selection dropdown and observe available options.
+  3. Select an option (e.g., Engineering).
+- **Test Data:** Expected Options: All Departments, Engineering, Consulting, ITSM.
+- **Expected Result:** The department dropdown contains verified options; selecting an option filters the role list as per implementation.
 
 - **Test Case ID:** TC-04-02
 - **Flow ID:** FL-04
@@ -212,9 +209,9 @@ The recommended next step for this project is to:
 - **Priority:** Medium
 - **Preconditions:** User is on the Careers page.
 - **Test Steps:**
-  1. Locate and click the "SEND SPECULATIVE CV" button.
+  1. Locate and click the "SEND SPECULATIVE CV" or equivalent CTA.
 - **Test Data:** N/A
-- **Expected Result:** Button initiates a mailto action to careers@rubric.co.za or navigates to a designated form (Implementation pending).
+- **Expected Result:** Button initiates a contact action (e.g., mailto or form navigation) as implemented.
 
 ### FL-05: Platform Validation
 - **Test Case ID:** TC-05-01
@@ -224,146 +221,141 @@ The recommended next step for this project is to:
 - **Priority:** High
 - **Preconditions:** User is on the Enterprise Platform page.
 - **Test Steps:**
-  1. Locate the "Metrics Row".
-  2. Verify values for Uptime SLA and Data Encryption.
-- **Test Data:** N/A
-- **Expected Result:** Metrics display "99.99%" and "AES-256" respectively, reflecting verified engineering data.
+  1. Locate the performance metrics section.
+  2. Verify that implemented platform metrics are displayed correctly.
+- **Test Data:** Verified Metrics: Uptime SLA (99.99%), Data Encryption (AES-256).
+- **Expected Result:** Metrics are visible and match the verified engineering data in the implementation.
 
 - **Test Case ID:** TC-05-02
 - **Flow ID:** FL-05
-- **Scenario:** Verify "REQUEST ACCESS" CTA interaction.
+- **Scenario:** Verify "REQUEST ACCESS" or equivalent CTA interaction.
 - **Test Type:** Happy Path
 - **Priority:** High
 - **Preconditions:** User is on the Enterprise Platform page.
 - **Test Steps:**
-  1. Click the "REQUEST ACCESS" button.
+  1. Locate and click the primary platform CTA.
 - **Test Data:** N/A
-- **Expected Result:** The application triggers a relevant platform enquiry or navigates to the contact form.
+- **Expected Result:** The application initiates a relevant enquiry process or navigates to the contact form.
 
 ### FL-06: Global Navigation Integrity
 - **Test Case ID:** TC-06-01
 - **Flow ID:** FL-06
-- **Scenario:** Verify sticky Navbar behavior on scroll.
-- **Test Type:** UI / Regression
-- **Priority:** High
-- **Preconditions:** Access any page with scrollable content (e.g., Services).
-- **Test Steps:**
-  1. Scroll down the page.
-  2. Observe the Navbar position.
-- **Test Data:** N/A
-- **Expected Result:** The Navbar remains fixed at the top of the viewport.
-
-- **Test Case ID:** TC-06-02
-- **Flow ID:** FL-06
 - **Scenario:** Verify Navbar link routing (Desktop).
 - **Test Type:** Happy Path / Regression
 - **Priority:** Critical
-- **Preconditions:** User is on the Home page.
+- **Preconditions:** User is on the Home page (Desktop viewport).
 - **Test Steps:**
-  1. Click the "Insights" link in the Navbar.
-  2. Verify page load.
-  3. Click the "rubric" wordmark logo.
+  1. Click primary links in the Navbar (e.g. About, Platform, Insights).
+  2. Click the brand wordmark logo.
 - **Test Data:** N/A
-- **Expected Result:** Browser navigates to Insights and then returns to the Home page.
+- **Expected Result:** Each link correctly routes to the intended page; clicking logo returns to Home.
+
+- **Test Case ID:** TC-06-02
+- **Flow ID:** FL-06
+- **Scenario:** Verify Footer navigation links.
+- **Test Type:** Happy Path
+- **Priority:** Medium
+- **Preconditions:** User scrolls to the footer of any page.
+- **Test Steps:**
+  1. Click on implemented links within the footer navigation sections (e.g. "Our Story" or "Careers").
+- **Test Data:** N/A
+- **Expected Result:** The application navigates to the correct corresponding route.
 
 ### FL-07: Mobile / Responsive Navigation
 - **Test Case ID:** TC-07-01
 - **Flow ID:** FL-07
-- **Scenario:** Verify mobile menu toggle and overlay display.
+- **Scenario:** Verify mobile menu toggle and overlay.
 - **Test Type:** Responsive / Happy Path
 - **Priority:** Critical
-- **Preconditions:** Mobile viewport width (<768px).
+- **Preconditions:** Mobile viewport width (<1024px).
 - **Test Steps:**
-  1. Tap the hamburger Menu icon.
+  1. Tap the Menu trigger icon.
   2. Observe the navigation overlay.
-  3. Tap the "X" (close) icon.
+  3. Tap the close icon.
 - **Test Data:** N/A
-- **Expected Result:** Menu opens a full-screen overlay with primary links; tapping close removes the overlay.
+- **Expected Result:** Menu opens an overlay with primary links; tapping close removes the overlay.
 
 - **Test Case ID:** TC-07-02
 - **Flow ID:** FL-07
-- **Scenario:** Verify responsive layout of service cards on Tablet.
+- **Scenario:** Verify responsive layout of core content on Tablet.
 - **Test Type:** Responsive
 - **Priority:** Medium
-- **Preconditions:** Tablet viewport width (768px - 1024px).
+- **Preconditions:** Tablet viewport width.
 - **Test Steps:**
-  1. Navigate to the Home page.
-  2. Observe the domain cards grid layout.
+  1. Navigate to various pages (Home, Services).
+  2. Observe the layout of grids and cards.
 - **Test Data:** N/A
-- **Expected Result:** Grid layout adjusts (e.g., from 5 to 2 or 3 columns) to maintain legibility without horizontal scrolling.
+- **Expected Result:** Layout adjusts to maintain legibility without horizontal scrolling as per implementation.
 
 ### FL-08: Branding & Visual Consistency
 - **Test Case ID:** TC-08-01
 - **Flow ID:** FL-08
-- **Scenario:** Verify primary brand color usage across pages.
+- **Scenario:** Verify primary brand color usage.
 - **Test Type:** UI / Branding
 - **Priority:** High
-- **Preconditions:** Access Home, Services, and About pages.
+- **Preconditions:** Access any page.
 - **Test Steps:**
-  1. Verify background of Hero/Footer uses Graphite (#1E2126).
-  2. Verify primary buttons use Signal Red (#E53935).
+  1. Verify background and primary action elements use brand colors (Graphite and Signal Red).
 - **Test Data:** N/A
-- **Expected Result:** Visual elements strictly adhere to the defined brand color tokens.
+- **Expected Result:** Visual elements adhere to the defined brand color tokens in the current implementation.
 
 - **Test Case ID:** TC-08-02
 - **Flow ID:** FL-08
-- **Scenario:** Verify UI component rounding and border styles.
+- **Scenario:** Verify UI component consistency.
 - **Test Type:** UI / Branding
 - **Priority:** High
 - **Preconditions:** View primary buttons and cards.
 - **Test Steps:**
-  1. Inspect the corner rounding of buttons and domain cards.
-- **Test Data:** Specification: ROUND_FOUR.
-- **Expected Result:** Elements maintain a consistent 4px/8px rounding as per the design system specification.
+  1. Inspect corner rounding and border styles across various components.
+- **Test Data:** N/A
+- **Expected Result:** Elements maintain a consistent visual style as per design specifications (e.g., ROUND_FOUR).
 
 ### FL-09: Proof of Impact
 - **Test Case ID:** TC-09-01
 - **Flow ID:** FL-09
-- **Scenario:** Verify case study success metric accuracy.
+- **Scenario:** Verify case study success metric display.
 - **Test Type:** UI / Data
 - **Priority:** High
 - **Preconditions:** User is on the Case Studies page.
 - **Test Steps:**
-  1. Locate the "Automated Precision for Enterprise Finance" card.
-  2. Verify the impact metric displayed.
-- **Test Data:** Metric: "90% Failure Reduction".
-- **Expected Result:** Card accurately displays the verified SQE impact statistic.
+  1. Observe success metrics on implemented case study cards.
+- **Test Data:** Verified Case: "Automated Precision for Enterprise Finance" (90% Failure Reduction).
+- **Expected Result:** Cards accurately display verified impact statistics from the implementation.
 
 - **Test Case ID:** TC-09-02
 - **Flow ID:** FL-09
-- **Scenario:** Verify consultation link from Case Studies page.
+- **Scenario:** Verify consultation link from Case Studies.
 - **Test Type:** Happy Path
 - **Priority:** High
 - **Preconditions:** User is on the Case Studies page.
 - **Test Steps:**
-  1. Locate and click the "SCHEDULE CONSULTATION" button.
+  1. Click the consultation CTA button (e.g. SCHEDULE CONSULTATION).
 - **Test Data:** N/A
 - **Expected Result:** The application navigates to the `/contact` route.
 
 ### FL-10: Thought Leadership
 - **Test Case ID:** TC-10-01
 - **Flow ID:** FL-10
-- **Scenario:** Verify Insights search bar presence and placeholder.
+- **Scenario:** Verify Insights sidebar content discovery.
 - **Test Type:** UI
 - **Priority:** Medium
 - **Preconditions:** User is on the Insights page.
 - **Test Steps:**
-  1. Identify the search input field in the sidebar.
-  2. Verify the placeholder text.
-- **Test Data:** Placeholder: "SEARCH INSIGHTS...".
-- **Expected Result:** Search bar is present with the correct placeholder string.
+  1. Locate the search input field and trending topics section in the sidebar.
+  2. Verify placeholders and tags.
+- **Test Data:** Search Placeholder: "SEARCH INSIGHTS...".
+- **Expected Result:** Content discovery elements are present with correct labels and verified trending tags as per implementation.
 
 - **Test Case ID:** TC-10-02
 - **Flow ID:** FL-10
-- **Scenario:** Verify trending topics tag selection.
+- **Scenario:** Verify Insights interaction elements.
 - **Test Type:** Happy Path / UI
 - **Priority:** Medium
 - **Preconditions:** User is on the Insights page.
 - **Test Steps:**
-  1. Observe the "Trending Topics" section in the sidebar.
-  2. Verify tags like #QAAutomation and #ShiftLeft are visible.
+  1. Observe any implemented newsletter signup form or tag filtering mechanism.
 - **Test Data:** N/A
-- **Expected Result:** The tag list is rendered and clickable for filtering (Filtering logic: Implementation pending).
+- **Expected Result:** Available interaction elements are visible and follow branding standards; functionality to be confirmed against implementation.
 
 ### FL-11: About / Mission Review
 - **Test Case ID:** TC-11-01
@@ -373,17 +365,17 @@ The recommended next step for this project is to:
 - **Priority:** Medium
 - **Preconditions:** User is on the About page.
 - **Test Steps:**
-  1. Read the Hero headline and secondary narrative.
-- **Test Data:** Inception Year: 2007.
-- **Expected Result:** Text correctly describes Rubric’s history and commitment to Software Quality Engineering since 2007.
+  1. Read narrative text mentioning the company inception.
+- **Test Data:** Year: 2007.
+- **Expected Result:** Text identifies the company history correctly as per implementation.
 
 - **Test Case ID:** TC-11-02
 - **Flow ID:** FL-11
-- **Scenario:** Verify Footer office locations.
-- **Test Type:** UI / Happy Path
+- **Scenario:** Verify physical office details.
+- **Test Type:** UI / Data
 - **Priority:** Medium
-- **Preconditions:** Scroll to the footer of any page.
+- **Preconditions:** Access Contact page or scroll to Footer.
 - **Test Steps:**
-  1. Identify physical office details for Johannesburg and Mauritius.
-- **Test Data:** N/A
-- **Expected Result:** Footer displays verified addresses for both Global HQ and Mauritius regional office.
+  1. Locate office address details.
+- **Test Data:** Johannesburg, Mauritius.
+- **Expected Result:** Office details for confirmed locations are displayed correctly in the implementation.
