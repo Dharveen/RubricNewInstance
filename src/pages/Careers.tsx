@@ -1,21 +1,20 @@
-import { ArrowRight, MapPin, Search, Globe, ChevronRight } from 'lucide-react';
+import { MapPin, Globe, ArrowRight, ChevronRight } from 'lucide-react';
 
 const Careers = () => {
   const openings = [
-    { title: 'Senior Automation Engineer', location: 'Remote / London', type: 'Full-time' },
-    { title: 'Lead ITSM Consultant', location: 'Hybrid / New York', type: 'Full-time' },
-    { title: 'Full Stack Developer (Next.js/Node)', location: 'Remote', type: 'Full-time' },
-    { title: 'QA Strategy Lead', location: 'Amsterdam', type: 'Contract' }
+    { title: 'Senior Automation Engineer', location: 'Johannesburg', type: 'Full-time' },
+    { title: 'Test Data Architect', location: 'Mauritius', type: 'Remote' },
+    { title: 'DevOps Quality Consultant', location: 'Johannesburg', type: 'Hybrid' }
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-graphite text-white pt-24 pb-32 md:pt-48 md:pb-64 relative overflow-hidden">
+      <section className="bg-graphite text-white pt-24 pb-20 md:pt-48 md:pb-40 relative overflow-hidden">
         <div className="container-custom relative z-10">
           <div className="max-w-5xl">
-            <span className="text-signal-red font-black tracking-[0.4em] text-[10px] uppercase mb-8 block">Career Evolution</span>
-            <h1 className="text-6xl md:text-[8rem] font-black leading-[0.85] tracking-tighter mb-12">
+            <span className="text-signal-red font-black tracking-[0.4em] text-[10px] uppercase mb-8 block">Career Pathways</span>
+            <h1 className="text-6xl md:text-9xl font-black leading-[0.85] tracking-tighter mb-12">
               Join the <br /> <span className="text-signal-red uppercase italic">Collective.</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl font-medium">
@@ -135,11 +134,116 @@ const Careers = () => {
             ))}
           </div>
 
-          <div className="mt-32 text-center">
-            <p className="text-xl text-slate-500 mb-10 font-medium italic">Don't see a role that fits? We're always looking for exceptional talent.</p>
-            <a href="mailto:careers@rubric.co.za" className="bg-graphite text-white px-16 py-8 rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-signal-red transition-all shadow-2xl shadow-graphite/20 inline-block">
-              SEND SPECULATIVE CV
-            </a>
+          <div className="mt-32 text-center mb-32">
+            <p className="text-xl text-slate-500 mb-10 font-medium italic">Don't see a role that fits? We're always looking for exceptional talent for our talent pool.</p>
+            <button className="bg-signal-red text-white px-16 py-8 rounded-xl font-black text-sm uppercase tracking-[0.3em] hover:bg-graphite transition-all shadow-2xl shadow-signal-red/30">
+              SUBMIT SPECULATIVE APPLICATION
+            </button>
+          </div>
+
+          {/* New Career Application Form */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-graphite rounded-t-3xl p-10 md:p-12">
+               <h2 className="text-4xl font-black text-white mb-4 tracking-tight">Career Application Form</h2>
+               <p className="text-slate-400 font-medium">Join our collective of elite engineers. Please provide your details below.</p>
+            </div>
+            <div className="bg-white border border-slate-100 p-8 md:p-16 shadow-2xl rounded-b-3xl">
+              <form className="space-y-16">
+
+                {/* Job Interested */}
+                <div className="space-y-8">
+                  <h3 className="text-signal-red font-black text-[10px] uppercase tracking-[0.3em] border-b border-slate-100 pb-4">Job Interested</h3>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Post Interested *</label>
+                    <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" placeholder="e.g. Senior Automation Engineer" required />
+                  </div>
+                </div>
+
+                {/* Personal Details */}
+                <div className="space-y-8">
+                  <h3 className="text-signal-red font-black text-[10px] uppercase tracking-[0.3em] border-b border-slate-100 pb-4">Personal Details</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="flex flex-col space-y-4 group">
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Name *</label>
+                      <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" required />
+                    </div>
+                    <div className="flex flex-col space-y-4 group">
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Surname *</label>
+                      <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" required />
+                    </div>
+                  </div>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Email Address *</label>
+                    <input type="email" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" required />
+                  </div>
+                </div>
+
+                {/* Contact Details */}
+                <div className="space-y-8">
+                  <h3 className="text-signal-red font-black text-[10px] uppercase tracking-[0.3em] border-b border-slate-100 pb-4">Contact Details</h3>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Address</label>
+                    <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="flex flex-col space-y-4 group">
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">City</label>
+                      <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                    </div>
+                    <div className="flex flex-col space-y-4 group">
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Post Code</label>
+                      <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                    </div>
+                    <div className="flex flex-col space-y-4 group">
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Country</label>
+                      <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                    </div>
+                    <div className="flex flex-col space-y-4 group">
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Telephone</label>
+                      <input type="tel" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Cell Phone *</label>
+                    <input type="tel" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" required />
+                  </div>
+                </div>
+
+                {/* Qualifications */}
+                <div className="space-y-8">
+                  <h3 className="text-signal-red font-black text-[10px] uppercase tracking-[0.3em] border-b border-slate-100 pb-4">Qualifications</h3>
+                  <div className="space-y-6">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Do you have a degree?</label>
+                    <div className="flex gap-12">
+                      <label className="flex items-center gap-3 cursor-pointer group/radio">
+                        <input type="radio" name="degree" value="yes" className="w-5 h-5 text-signal-red focus:ring-signal-red border-slate-300" />
+                        <span className="font-bold text-graphite">Yes</span>
+                      </label>
+                      <label className="flex items-center gap-3 cursor-pointer group/radio">
+                        <input type="radio" name="degree" value="no" className="w-5 h-5 text-signal-red focus:ring-signal-red border-slate-300" />
+                        <span className="font-bold text-graphite">No</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Where did you complete your degree?</label>
+                    <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                  </div>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Title of your degree</label>
+                    <input type="text" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite" />
+                  </div>
+                  <div className="flex flex-col space-y-4 group">
+                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 group-focus-within:text-signal-red transition-colors">Upload your CV *</label>
+                    <input type="file" className="bg-fog border-0 border-b-2 border-slate-200 focus:border-signal-red focus:ring-0 transition-all p-4 outline-none font-bold text-graphite file:mr-6 file:py-2 file:px-6 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-graphite file:text-white hover:file:bg-signal-red transition-all cursor-pointer" required />
+                  </div>
+                </div>
+
+                <button className="bg-signal-red text-white font-black py-8 rounded-xl hover:bg-graphite transition-all w-full uppercase tracking-[0.4em] text-sm shadow-2xl shadow-signal-red/30 active:scale-[0.98]">
+                  Submit Your Application
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
