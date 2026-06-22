@@ -20,11 +20,11 @@
     * Jira test cases
     * Xray test cases
 
-### Example Invocations
-* `Use the rubric-playwright-qa skill. Generate user stories for FL-03 Strategic Inquiry and FL-04 Talent Acquisition.`
-* `Use the rubric-playwright-qa skill. Update Contact form validation tests.`
-* `Use the rubric-playwright-qa skill. Generate manual test cases for FL-01 to FL-11.`
-* `Use the rubric-playwright-qa skill. Fix failing Playwright E2E tests without changing the UI design.`
+## Example Invocations
+* Use the rubric-playwright-qa skill. Generate user stories for FL-03 Strategic Inquiry and FL-04 Talent Acquisition.
+* Use the rubric-playwright-qa skill. Update Contact form validation tests.
+* Use the rubric-playwright-qa skill. Generate manual test cases for FL-01 to FL-11.
+* Use the rubric-playwright-qa skill. Fix failing Playwright E2E tests without changing the UI design.
 
 ## Project Context
 * **Tech Stack**: React, TypeScript, Vite, Tailwind CSS, Playwright.
