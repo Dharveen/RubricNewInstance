@@ -1,6 +1,7 @@
 # Skill: rubric-playwright-qa
 
 ## Metadata
+
 * **name**: rubric-playwright-qa
 * **description**: Use this skill when working on Playwright E2E automation, form validation tests, responsive checks, navigation tests, branding checks, QA automation, user stories, acceptance criteria, manual test cases, Jira/Xray-ready test cases, or QA documentation for the Rubric Website Redesign.
 * **invocation**: Use the rubric-playwright-qa skill.
@@ -21,6 +22,7 @@
     * Xray test cases
 
 ## Example Invocations
+
 * Use the rubric-playwright-qa skill. Generate user stories for FL-03 Strategic Inquiry and FL-04 Talent Acquisition.
 * Use the rubric-playwright-qa skill. Update Contact form validation tests.
 * Use the rubric-playwright-qa skill. Generate manual test cases for FL-01 to FL-11.
