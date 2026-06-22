@@ -2,8 +2,10 @@
 
 ## Metadata
 * **name**: rubric-playwright-qa
-* **description**: Use this skill when working on Playwright E2E automation, form validation tests, responsive checks, navigation tests, branding checks, or QA automation for the Rubric Website Redesign.
-* **invocation**: Use the rubric-playwright-qa skill.
+* **description**: Use this skill when working on Playwright E2E automation, form validation tests, responsive checks, navigation tests, branding checks, QA automation, user stories, acceptance criteria, manual test cases, Jira/Xray-ready test cases, or QA documentation for the Rubric Website Redesign.
+* **invocation**:
+    * Use the rubric-playwright-qa skill.
+    * Use the rubric-playwright-qa skill. Generate user stories for FL-03 Strategic Inquiry and FL-04 Talent Acquisition.
 * **activation_keywords**:
     * Playwright
     * E2E automation
@@ -13,11 +15,17 @@
     * navigation testing
     * branding checks
     * QA automation
+    * user stories
+    * acceptance criteria
+    * manual test cases
+    * QA documentation
+    * Jira test cases
+    * Xray test cases
 
 ## Project Context
 * **Tech Stack**: React, TypeScript, Vite, Tailwind CSS, Playwright.
 * **Website Routes**:
-    * `/` (Home)
+    * `/ ` (Home)
     * `/about`
     * `/services`
     * `/platform`
@@ -56,6 +64,89 @@
 * **FL-09**: Proof of Impact
 * **FL-10**: Thought Leadership
 * **FL-11**: About / Mission Review
+
+## User Story & QA Documentation Rules
+
+Use this section when asked to create or update user stories, acceptance criteria, manual test cases, or QA documentation for the Rubric Website Redesign.
+
+### User Story Rules
+
+When generating user stories:
+
+* Act as a Business Analyst and Software Quality Engineer.
+* Use the format:
+  `As a [user type], I want to [goal], so that [business value].`
+* Base user stories only on:
+
+  * Current React implementation
+  * Approved website routes
+  * Existing Rubric documentation
+  * Stitch prototype screens
+  * `docs/rubric-critical-flows-user-stories-acceptance-criteria.md`
+* Do not invent pages, buttons, forms, fields, metrics, filters, backend behavior, or integrations.
+* If something is not confirmed, mark it as:
+  `To be confirmed against implementation`.
+* Link each user story to the correct critical flow ID.
+
+### Approved User Story Flows
+
+* FL-01 Hero Conversion
+* FL-02 Service Exploration
+* FL-03 Strategic Inquiry
+* FL-04 Talent Acquisition
+* FL-05 Platform Validation
+* FL-06 Global Navigation Integrity
+* FL-07 Mobile / Responsive Navigation
+* FL-08 Branding & Visual Consistency
+* FL-09 Proof of Impact
+* FL-10 Thought Leadership
+* FL-11 About / Mission Review
+
+### Acceptance Criteria Rules
+
+When generating acceptance criteria:
+
+* Use strict Given/When/Then format.
+* Make each criterion testable.
+* Avoid vague wording such as:
+
+  * user-friendly
+  * intuitive
+  * clearly displayed
+  * functional
+* Do not include unconfirmed features.
+* Each acceptance criterion must map back to a user story and critical flow.
+
+### Manual Test Case Rules
+
+When generating manual test cases:
+
+* Include:
+
+  * Test Case ID
+  * Flow ID
+  * Scenario
+  * Test Type
+  * Priority
+  * Preconditions
+  * Test Steps
+  * Test Data
+  * Expected Result
+* Include happy path, negative, validation, UI, responsive, regression, navigation, and branding checks where applicable.
+* Keep backend/API submission as pending unless implemented.
+
+### Jira/Xray Rules
+
+When preparing Jira or Xray-ready test cases:
+
+* Maintain traceability between:
+
+  * Critical Flow
+  * User Story
+  * Acceptance Criteria
+  * Test Case
+* Do not create Jira/Xray integration unless explicitly requested.
+* Keep the output suitable for manual Jira/Xray entry if direct integration is unavailable.
 
 ## Form Testing Rules
 
